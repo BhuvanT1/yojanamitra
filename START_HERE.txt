@@ -1,0 +1,32 @@
+YojanaMitra - how to run the Python prototype
+=============================================
+
+This file covers the first version (Streamlit). For the current Next.js app
+see README.md: npm install, then npm run dev.
+
+EASIEST WAY
+  Double-click  run.bat
+  It sets everything up and opens the app at http://localhost:8501
+  First run takes about a minute; after that it starts in seconds.
+
+  Then double-click  run_api.bat  if you also want the REST API
+  at http://localhost:8000/docs
+
+BY HAND (Anaconda Prompt or PowerShell, from this folder)
+  python -m venv .venv
+  .venv\Scripts\activate
+  pip install -r requirements.txt
+  python scripts\build_corpus.py
+  python scripts\build_gold_set.py
+
+  streamlit run app.py                   the web UI
+  python demo.py --all                   command line, 5 example personas
+  python demo.py "your text here" -v     shows every clause check
+  pytest -q                              50 tests
+  python -m eval.evaluate                reproduces the README numbers
+
+NEEDS
+  Python 3.10 or newer. No API keys, no model downloads, no internet.
+
+READ NEXT
+  README.md  - the design, the results, and the known limitations

@@ -1,0 +1,27 @@
+# Render blueprint. `render.com/deploy` reads this, or point a new Web Service
+# at the repo and Render will find it.
+#
+# The disk is not optional. Without it the service still starts and still
+# answers, but every reviewer account, invite code and clause approval is lost
+# on each deploy — and nothing visibly breaks, which is the worst kind of
+# failure.
+services:
+  - type: web
+    name: yojanamitra
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    region: singapore
+    healthCheckPath: /api/health
+    envVars:
+      - key: YM_SIMULATE
+        value: '1'
+      - key: YM_STATE_DIR
+        value: /data
+      # Set in the dashboard, not here, if plain-language explanations are wanted.
+      - key: GEMINI_API_KEY
+        sync: false
+    disk:
+      name: ym-state
+      mountPath: /data
+      sizeGB: 1

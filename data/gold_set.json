@@ -1,0 +1,2923 @@
+{
+  "methodology": "Labels are derived by running the deterministic rule filter over a hand-written ground-truth profile for each persona. The benchmark measures recovery of that conclusion from free text (extraction + retrieval). It does NOT validate that the corpus states Indian eligibility law correctly; that requires human verification against the live portal.",
+  "personas": 20,
+  "items": 60,
+  "data": [
+    {
+      "id": "ap-small-farmer-daughter-0",
+      "persona": "ap-small-farmer-daughter",
+      "phrasing": "plain",
+      "text": "I'm a farmer in Andhra, I own 2 acres, and my daughter is in 11th class. I earn about 1.8 lakh a year and live in a village.",
+      "profile": {
+        "age": 44,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 180000,
+        "land_acres": 2.0,
+        "state": "andhra pradesh",
+        "residence": "rural",
+        "dependents": [
+          {
+            "gender": "female",
+            "education_stage": "class_11_12",
+            "class": 11
+          }
+        ]
+      },
+      "expected_schemes": [
+        "ap-rythu-bharosa",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "pm-kisan",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmmvy",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "ap-rythu-bharosa",
+        "ayushman-bharat",
+        "ignpdps",
+        "ignwps",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsp-post-matric-sc",
+        "pm-kisan",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "ap-small-farmer-daughter-1",
+      "persona": "ap-small-farmer-daughter",
+      "phrasing": "telegraphic",
+      "text": "44 year old farmer from Andhra Pradesh, 2 acres of land, village, annual income 180000, daughter studying 11th standard",
+      "profile": {
+        "age": 44,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 180000,
+        "land_acres": 2.0,
+        "state": "andhra pradesh",
+        "residence": "rural",
+        "dependents": [
+          {
+            "gender": "female",
+            "education_stage": "class_11_12",
+            "class": 11
+          }
+        ]
+      },
+      "expected_schemes": [
+        "ap-rythu-bharosa",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "pm-kisan",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmmvy",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "ap-rythu-bharosa",
+        "ayushman-bharat",
+        "ignpdps",
+        "ignwps",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsp-post-matric-sc",
+        "pm-kisan",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "ap-small-farmer-daughter-2",
+      "persona": "ap-small-farmer-daughter",
+      "phrasing": "code_mixed",
+      "text": "Main Andhra ka kisan hoon, 2 acre zameen hai, meri beti 11th class mein hai, saal ka income 1.8 lakh, gaon mein rehta hoon",
+      "profile": {
+        "age": 44,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 180000,
+        "land_acres": 2.0,
+        "state": "andhra pradesh",
+        "residence": "rural",
+        "dependents": [
+          {
+            "gender": "female",
+            "education_stage": "class_11_12",
+            "class": 11
+          }
+        ]
+      },
+      "expected_schemes": [
+        "ap-rythu-bharosa",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "pm-kisan",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmmvy",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "ap-rythu-bharosa",
+        "ayushman-bharat",
+        "ignpdps",
+        "ignwps",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsp-post-matric-sc",
+        "pm-kisan",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "telangana-marginal-farmer-0",
+      "persona": "telangana-marginal-farmer",
+      "phrasing": "plain",
+      "text": "I am 33, a farmer in Telangana with 1.5 acres of land in my village, OBC, my yearly income is around 1.5 lakh.",
+      "profile": {
+        "age": 33,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 150000,
+        "land_acres": 1.5,
+        "state": "telangana",
+        "residence": "rural",
+        "category": "obc"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "kcc",
+        "mgnrega",
+        "pm-kisan",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmsby",
+        "ts-rythu-bandhu"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "pm-kisan",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "sukanya-samriddhi",
+        "ts-kalyana-lakshmi",
+        "ts-rythu-bandhu",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "telangana-marginal-farmer-1",
+      "persona": "telangana-marginal-farmer",
+      "phrasing": "telegraphic",
+      "text": "farmer, telangana, 1.5 acres, age 33, OBC, rural, income 150000 per year",
+      "profile": {
+        "age": 33,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 150000,
+        "land_acres": 1.5,
+        "state": "telangana",
+        "residence": "rural",
+        "category": "obc"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "kcc",
+        "mgnrega",
+        "pm-kisan",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmsby",
+        "ts-rythu-bandhu"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "pm-kisan",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "sukanya-samriddhi",
+        "ts-kalyana-lakshmi",
+        "ts-rythu-bandhu",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "telangana-marginal-farmer-2",
+      "persona": "telangana-marginal-farmer",
+      "phrasing": "code_mixed",
+      "text": "33 saal ka kisan, telangana, 1.5 acre kheti, gaon, OBC, income 1.5 lakh",
+      "profile": {
+        "age": 33,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 150000,
+        "land_acres": 1.5,
+        "state": "telangana",
+        "residence": "rural",
+        "category": "obc"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "kcc",
+        "mgnrega",
+        "pm-kisan",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmsby",
+        "ts-rythu-bandhu"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "pm-kisan",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "sukanya-samriddhi",
+        "ts-kalyana-lakshmi",
+        "ts-rythu-bandhu",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "sc-engineering-student-0",
+      "persona": "sc-engineering-student",
+      "phrasing": "plain",
+      "text": "I am a 20 year old girl doing B.Tech in Tamil Nadu, I belong to SC category and my family income is 2 lakh per year. We live in a town.",
+      "profile": {
+        "age": 20,
+        "gender": "female",
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 200000,
+        "state": "tamil nadu",
+        "category": "sc",
+        "education_stage": "undergraduate",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "standup-india",
+        "tn-moovalur-ramamirtham"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "tn-moovalur-ramamirtham",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "sc-engineering-student-1",
+      "persona": "sc-engineering-student",
+      "phrasing": "telegraphic",
+      "text": "female, 20, undergraduate engineering student, Tamil Nadu, scheduled caste, family income 200000, urban",
+      "profile": {
+        "age": 20,
+        "gender": "female",
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 200000,
+        "state": "tamil nadu",
+        "category": "sc",
+        "education_stage": "undergraduate",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "standup-india",
+        "tn-moovalur-ramamirtham"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "tn-moovalur-ramamirtham",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "sc-engineering-student-2",
+      "persona": "sc-engineering-student",
+      "phrasing": "code_mixed",
+      "text": "20 years old, studying degree in Tamil Nadu, SC, girl, parents earn 2 lakh a year, city",
+      "profile": {
+        "age": 20,
+        "gender": "female",
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 200000,
+        "state": "tamil nadu",
+        "category": "sc",
+        "education_stage": "undergraduate",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "standup-india",
+        "tn-moovalur-ramamirtham"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "tn-moovalur-ramamirtham",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "st-class9-student-0",
+      "persona": "st-class9-student",
+      "phrasing": "plain",
+      "text": "I am 14 years old, studying in class 9 in a government school in Odisha, we are a scheduled tribe family and my parents earn about 90000 a year in our village.",
+      "profile": {
+        "age": 14,
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 90000,
+        "state": "odisha",
+        "category": "st",
+        "education_stage": "class_9_10",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "nmms",
+        "nsp-pre-matric-st"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "nmms",
+        "nsap-nfbs",
+        "nsp-pre-matric-st",
+        "pmay-g",
+        "sukanya-samriddhi"
+      ]
+    },
+    {
+      "id": "st-class9-student-1",
+      "persona": "st-class9-student",
+      "phrasing": "telegraphic",
+      "text": "14, class 9 student, Odisha, ST, rural, family income 90000",
+      "profile": {
+        "age": 14,
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 90000,
+        "state": "odisha",
+        "category": "st",
+        "education_stage": "class_9_10",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "nmms",
+        "nsp-pre-matric-st"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "nmms",
+        "nsap-nfbs",
+        "nsp-pre-matric-st",
+        "pmay-g",
+        "sukanya-samriddhi"
+      ]
+    },
+    {
+      "id": "st-class9-student-2",
+      "persona": "st-class9-student",
+      "phrasing": "code_mixed",
+      "text": "class 9 mein padhta hoon, 14 saal, Odisha, adivasi, gaon, income 90000",
+      "profile": {
+        "age": 14,
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 90000,
+        "state": "odisha",
+        "category": "st",
+        "education_stage": "class_9_10",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "nmms",
+        "nsp-pre-matric-st"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "nmms",
+        "nsap-nfbs",
+        "nsp-pre-matric-st",
+        "pmay-g",
+        "sukanya-samriddhi"
+      ]
+    },
+    {
+      "id": "widow-bpl-pension-0",
+      "persona": "widow-bpl-pension",
+      "phrasing": "plain",
+      "text": "I am a 52 year old widow in a village in Bihar, I have no land, we have a BPL ration card and I earn about 40000 a year.",
+      "profile": {
+        "age": 52,
+        "gender": "female",
+        "annual_income_inr": 40000,
+        "land_acres": 0.0,
+        "state": "bihar",
+        "residence": "rural",
+        "special_categories": [
+          "widow",
+          "bpl",
+          "landless"
+        ]
+      },
+      "expected_schemes": [
+        "ayushman-bharat",
+        "ignwps",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmmvy",
+        "pmsby",
+        "ujjwala"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "ignwps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "widow-bpl-pension-1",
+      "persona": "widow-bpl-pension",
+      "phrasing": "telegraphic",
+      "text": "widow, 52, Bihar, landless, BPL, rural, income 40000",
+      "profile": {
+        "age": 52,
+        "gender": "female",
+        "annual_income_inr": 40000,
+        "land_acres": 0.0,
+        "state": "bihar",
+        "residence": "rural",
+        "special_categories": [
+          "widow",
+          "bpl",
+          "landless"
+        ]
+      },
+      "expected_schemes": [
+        "ayushman-bharat",
+        "ignwps",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmmvy",
+        "pmsby",
+        "ujjwala"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "ignwps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "widow-bpl-pension-2",
+      "persona": "widow-bpl-pension",
+      "phrasing": "code_mixed",
+      "text": "52 saal ki vidhwa hoon, Bihar ke gaon mein, koi zameen nahi, BPL card hai, saal ka 40000",
+      "profile": {
+        "age": 52,
+        "gender": "female",
+        "annual_income_inr": 40000,
+        "land_acres": 0.0,
+        "state": "bihar",
+        "residence": "rural",
+        "special_categories": [
+          "widow",
+          "bpl",
+          "landless"
+        ]
+      },
+      "expected_schemes": [
+        "ayushman-bharat",
+        "ignwps",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmmvy",
+        "pmsby",
+        "ujjwala"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "ignwps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "senior-citizen-bpl-0",
+      "persona": "senior-citizen-bpl",
+      "phrasing": "plain",
+      "text": "I am 68 years old, living in a village in Uttar Pradesh, I own no land, we hold a BPL card and our yearly income is around 30000.",
+      "profile": {
+        "age": 68,
+        "annual_income_inr": 30000,
+        "land_acres": 0.0,
+        "state": "uttar pradesh",
+        "residence": "rural",
+        "special_categories": [
+          "bpl",
+          "landless"
+        ]
+      },
+      "expected_schemes": [
+        "ayushman-bharat",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmsby",
+        "vay-vandana"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "ignwps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala",
+        "up-kanya-sumangala",
+        "vay-vandana"
+      ]
+    },
+    {
+      "id": "senior-citizen-bpl-1",
+      "persona": "senior-citizen-bpl",
+      "phrasing": "telegraphic",
+      "text": "68 year old man, UP, rural, landless, below poverty line, income 30000 per year",
+      "profile": {
+        "age": 68,
+        "annual_income_inr": 30000,
+        "land_acres": 0.0,
+        "state": "uttar pradesh",
+        "residence": "rural",
+        "special_categories": [
+          "bpl",
+          "landless"
+        ]
+      },
+      "expected_schemes": [
+        "ayushman-bharat",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmsby",
+        "vay-vandana"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "ignwps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala",
+        "up-kanya-sumangala",
+        "vay-vandana"
+      ]
+    },
+    {
+      "id": "senior-citizen-bpl-2",
+      "persona": "senior-citizen-bpl",
+      "phrasing": "code_mixed",
+      "text": "68 saal ka hoon, UP ke gaon mein, zameen nahi hai, gareeb hain, BPL card",
+      "profile": {
+        "age": 68,
+        "annual_income_inr": 30000,
+        "land_acres": 0.0,
+        "state": "uttar pradesh",
+        "residence": "rural",
+        "special_categories": [
+          "bpl",
+          "landless"
+        ]
+      },
+      "expected_schemes": [
+        "ayushman-bharat",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmsby",
+        "vay-vandana"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "ignwps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala",
+        "up-kanya-sumangala",
+        "vay-vandana"
+      ]
+    },
+    {
+      "id": "disabled-adult-bpl-0",
+      "persona": "disabled-adult-bpl",
+      "phrasing": "plain",
+      "text": "I am 34, differently abled with a disability certificate, living in a village in Maharashtra with a BPL ration card, income about 60000 a year.",
+      "profile": {
+        "age": 34,
+        "annual_income_inr": 60000,
+        "state": "maharashtra",
+        "residence": "rural",
+        "special_categories": [
+          "differently_abled",
+          "bpl"
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "mh-mahatma-phule-jan-arogya",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "mh-mahatma-phule-jan-arogya",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-kisan",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "disabled-adult-bpl-1",
+      "persona": "disabled-adult-bpl",
+      "phrasing": "telegraphic",
+      "text": "34, disabled, Maharashtra, BPL, rural, income 60000",
+      "profile": {
+        "age": 34,
+        "annual_income_inr": 60000,
+        "state": "maharashtra",
+        "residence": "rural",
+        "special_categories": [
+          "differently_abled",
+          "bpl"
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "mh-mahatma-phule-jan-arogya",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "mh-mahatma-phule-jan-arogya",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-kisan",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "disabled-adult-bpl-2",
+      "persona": "disabled-adult-bpl",
+      "phrasing": "code_mixed",
+      "text": "34 saal, viklang hoon, Maharashtra gaon, BPL card, 60000 saal ka",
+      "profile": {
+        "age": 34,
+        "annual_income_inr": 60000,
+        "state": "maharashtra",
+        "residence": "rural",
+        "special_categories": [
+          "differently_abled",
+          "bpl"
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "mh-mahatma-phule-jan-arogya",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "mh-mahatma-phule-jan-arogya",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-kisan",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "urban-street-vendor-0",
+      "persona": "urban-street-vendor",
+      "phrasing": "plain",
+      "text": "I am 39 and I run a small street vending stall in Delhi city, I make around 1.4 lakh a year.",
+      "profile": {
+        "age": 39,
+        "occupation": [
+          "shopkeeper"
+        ],
+        "annual_income_inr": 140000,
+        "state": "delhi",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby",
+        "pmsvanidhi"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmsvanidhi",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "urban-street-vendor-1",
+      "persona": "urban-street-vendor",
+      "phrasing": "telegraphic",
+      "text": "street vendor, 39, Delhi, urban, annual income 140000",
+      "profile": {
+        "age": 39,
+        "occupation": [
+          "shopkeeper"
+        ],
+        "annual_income_inr": 140000,
+        "state": "delhi",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby",
+        "pmsvanidhi"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmsvanidhi",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "urban-street-vendor-2",
+      "persona": "urban-street-vendor",
+      "phrasing": "code_mixed",
+      "text": "39 saal, Delhi shehar mein thela lagata hoon, saal ka 1.4 lakh",
+      "profile": {
+        "age": 39,
+        "occupation": [
+          "shopkeeper"
+        ],
+        "annual_income_inr": 140000,
+        "state": "delhi",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby",
+        "pmsvanidhi"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmsvanidhi",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "handloom-weaver-0",
+      "persona": "handloom-weaver",
+      "phrasing": "plain",
+      "text": "I am a 45 year old woman handloom weaver in a village in West Bengal, earning about 1.1 lakh a year.",
+      "profile": {
+        "age": 45,
+        "gender": "female",
+        "occupation": [
+          "weaver"
+        ],
+        "annual_income_inr": 110000,
+        "state": "west bengal",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "handloom-weavers-mudra",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "ignwps",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "handloom-weaver-1",
+      "persona": "handloom-weaver",
+      "phrasing": "telegraphic",
+      "text": "handloom weaver, female, 45, West Bengal, rural, income 110000",
+      "profile": {
+        "age": 45,
+        "gender": "female",
+        "occupation": [
+          "weaver"
+        ],
+        "annual_income_inr": 110000,
+        "state": "west bengal",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "handloom-weavers-mudra",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "ignwps",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "handloom-weaver-2",
+      "persona": "handloom-weaver",
+      "phrasing": "code_mixed",
+      "text": "45 saal ki hoon, handloom weaver, West Bengal gaon, 1.1 lakh saal ka",
+      "profile": {
+        "age": 45,
+        "gender": "female",
+        "occupation": [
+          "weaver"
+        ],
+        "annual_income_inr": 110000,
+        "state": "west bengal",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "handloom-weavers-mudra",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "ignwps",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "young-fisherman-0",
+      "persona": "young-fisherman",
+      "phrasing": "plain",
+      "text": "I am 29 and work as a fisherman in a coastal village in Kerala, my income is about 1.6 lakh a year.",
+      "profile": {
+        "age": 29,
+        "occupation": [
+          "fisherman"
+        ],
+        "annual_income_inr": 160000,
+        "state": "kerala",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "matsya-sampada",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "young-fisherman-1",
+      "persona": "young-fisherman",
+      "phrasing": "telegraphic",
+      "text": "fisherman, 29, Kerala, rural, income 160000 per year",
+      "profile": {
+        "age": 29,
+        "occupation": [
+          "fisherman"
+        ],
+        "annual_income_inr": 160000,
+        "state": "kerala",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "matsya-sampada",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "young-fisherman-2",
+      "persona": "young-fisherman",
+      "phrasing": "code_mixed",
+      "text": "29 saal, Kerala mein machhli pakadta hoon, gaon, 1.6 lakh",
+      "profile": {
+        "age": 29,
+        "occupation": [
+          "fisherman"
+        ],
+        "annual_income_inr": 160000,
+        "state": "kerala",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "matsya-sampada",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "rural-labourer-mgnrega-0",
+      "persona": "rural-labourer-mgnrega",
+      "phrasing": "plain",
+      "text": "I am 31, a daily wage labourer in a village in Jharkhand, I have no land, we have a BPL card and I earn roughly 70000 a year.",
+      "profile": {
+        "age": 31,
+        "occupation": [
+          "labourer"
+        ],
+        "annual_income_inr": 70000,
+        "land_acres": 0.0,
+        "state": "jharkhand",
+        "residence": "rural",
+        "special_categories": [
+          "landless",
+          "bpl"
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "rural-labourer-mgnrega-1",
+      "persona": "rural-labourer-mgnrega",
+      "phrasing": "telegraphic",
+      "text": "daily wage labourer, 31, Jharkhand, rural, landless, BPL, income 70000",
+      "profile": {
+        "age": 31,
+        "occupation": [
+          "labourer"
+        ],
+        "annual_income_inr": 70000,
+        "land_acres": 0.0,
+        "state": "jharkhand",
+        "residence": "rural",
+        "special_categories": [
+          "landless",
+          "bpl"
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "rural-labourer-mgnrega-2",
+      "persona": "rural-labourer-mgnrega",
+      "phrasing": "code_mixed",
+      "text": "31 saal ka mazdoor hoon, Jharkhand gaon, zameen nahi, BPL, 70000 saal ka",
+      "profile": {
+        "age": 31,
+        "occupation": [
+          "labourer"
+        ],
+        "annual_income_inr": 70000,
+        "land_acres": 0.0,
+        "state": "jharkhand",
+        "residence": "rural",
+        "special_categories": [
+          "landless",
+          "bpl"
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "young-mother-ujjwala-0",
+      "persona": "young-mother-ujjwala",
+      "phrasing": "plain",
+      "text": "I am a 27 year old woman in a village in Madhya Pradesh, we are a BPL family with no land, I have a daughter, and our income is about 85000 a year.",
+      "profile": {
+        "age": 27,
+        "gender": "female",
+        "annual_income_inr": 85000,
+        "land_acres": 0.0,
+        "state": "madhya pradesh",
+        "residence": "rural",
+        "special_categories": [
+          "bpl",
+          "landless"
+        ],
+        "dependents": [
+          {
+            "gender": "female",
+            "education_stage": null,
+            "class": null
+          }
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "ujjwala"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "young-mother-ujjwala-1",
+      "persona": "young-mother-ujjwala",
+      "phrasing": "telegraphic",
+      "text": "woman, 27, MP, rural, BPL, landless, one daughter, income 85000",
+      "profile": {
+        "age": 27,
+        "gender": "female",
+        "annual_income_inr": 85000,
+        "land_acres": 0.0,
+        "state": "madhya pradesh",
+        "residence": "rural",
+        "special_categories": [
+          "bpl",
+          "landless"
+        ],
+        "dependents": [
+          {
+            "gender": "female",
+            "education_stage": null,
+            "class": null
+          }
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "ujjwala"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "young-mother-ujjwala-2",
+      "persona": "young-mother-ujjwala",
+      "phrasing": "code_mixed",
+      "text": "27 saal ki hoon, MP gaon, BPL, zameen nahi, ek beti hai, 85000 saal ka",
+      "profile": {
+        "age": 27,
+        "gender": "female",
+        "annual_income_inr": 85000,
+        "land_acres": 0.0,
+        "state": "madhya pradesh",
+        "residence": "rural",
+        "special_categories": [
+          "bpl",
+          "landless"
+        ],
+        "dependents": [
+          {
+            "gender": "female",
+            "education_stage": null,
+            "class": null
+          }
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "ujjwala"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "handloom-weavers-mudra",
+        "ignpdps",
+        "kcc",
+        "matsya-sampada",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "up-girl-child-family-0",
+      "persona": "up-girl-child-family",
+      "phrasing": "plain",
+      "text": "I am 36, working as a labourer in a village in Uttar Pradesh, my daughter is in class 5 and our family income is 1.5 lakh a year.",
+      "profile": {
+        "age": 36,
+        "occupation": [
+          "labourer"
+        ],
+        "annual_income_inr": 150000,
+        "state": "uttar pradesh",
+        "residence": "rural",
+        "dependents": [
+          {
+            "gender": "female",
+            "education_stage": "class_1_8",
+            "class": 5
+          }
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "up-kanya-sumangala"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala",
+        "up-kanya-sumangala"
+      ]
+    },
+    {
+      "id": "up-girl-child-family-1",
+      "persona": "up-girl-child-family",
+      "phrasing": "telegraphic",
+      "text": "labourer, 36, UP, rural, daughter in class 5, income 150000",
+      "profile": {
+        "age": 36,
+        "occupation": [
+          "labourer"
+        ],
+        "annual_income_inr": 150000,
+        "state": "uttar pradesh",
+        "residence": "rural",
+        "dependents": [
+          {
+            "gender": "female",
+            "education_stage": "class_1_8",
+            "class": 5
+          }
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "up-kanya-sumangala"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala",
+        "up-kanya-sumangala"
+      ]
+    },
+    {
+      "id": "up-girl-child-family-2",
+      "persona": "up-girl-child-family",
+      "phrasing": "code_mixed",
+      "text": "36 saal ka majdoor, UP gaon, meri beti class 5 mein, 1.5 lakh saal ka",
+      "profile": {
+        "age": 36,
+        "occupation": [
+          "labourer"
+        ],
+        "annual_income_inr": 150000,
+        "state": "uttar pradesh",
+        "residence": "rural",
+        "dependents": [
+          {
+            "gender": "female",
+            "education_stage": "class_1_8",
+            "class": 5
+          }
+        ]
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "up-kanya-sumangala"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala",
+        "up-kanya-sumangala"
+      ]
+    },
+    {
+      "id": "karnataka-pg-student-0",
+      "persona": "karnataka-pg-student",
+      "phrasing": "plain",
+      "text": "I am 23, doing my Masters in Karnataka, OBC category, my family income is 2.2 lakh a year and we live in a city.",
+      "profile": {
+        "age": 23,
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 220000,
+        "state": "karnataka",
+        "category": "obc",
+        "education_stage": "postgraduate",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ka-vidyasiri",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "ka-vidyasiri",
+        "nsap-nfbs",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "karnataka-pg-student-1",
+      "persona": "karnataka-pg-student",
+      "phrasing": "telegraphic",
+      "text": "postgraduate student, 23, Karnataka, OBC, urban, family income 220000",
+      "profile": {
+        "age": 23,
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 220000,
+        "state": "karnataka",
+        "category": "obc",
+        "education_stage": "postgraduate",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ka-vidyasiri",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "ka-vidyasiri",
+        "nsap-nfbs",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "karnataka-pg-student-2",
+      "persona": "karnataka-pg-student",
+      "phrasing": "code_mixed",
+      "text": "23 saal, Karnataka mein M.Tech kar raha hoon, OBC, shehar, 2.2 lakh",
+      "profile": {
+        "age": 23,
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 220000,
+        "state": "karnataka",
+        "category": "obc",
+        "education_stage": "postgraduate",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "ka-vidyasiri",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "ka-vidyasiri",
+        "nsap-nfbs",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "young-entrepreneur-sc-0",
+      "persona": "young-entrepreneur-sc",
+      "phrasing": "plain",
+      "text": "I am a 28 year old woman from an SC family in Gujarat, I run my own small business in the city and earn about 3 lakh a year.",
+      "profile": {
+        "age": 28,
+        "gender": "female",
+        "occupation": [
+          "self_employed"
+        ],
+        "annual_income_inr": 300000,
+        "state": "gujarat",
+        "category": "sc",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmsvanidhi",
+        "pmvishwakarma",
+        "standup-india"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmsvanidhi",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "young-entrepreneur-sc-1",
+      "persona": "young-entrepreneur-sc",
+      "phrasing": "telegraphic",
+      "text": "female, 28, SC, Gujarat, self employed own business, urban, income 300000",
+      "profile": {
+        "age": 28,
+        "gender": "female",
+        "occupation": [
+          "self_employed"
+        ],
+        "annual_income_inr": 300000,
+        "state": "gujarat",
+        "category": "sc",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmsvanidhi",
+        "pmvishwakarma",
+        "standup-india"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmsvanidhi",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "young-entrepreneur-sc-2",
+      "persona": "young-entrepreneur-sc",
+      "phrasing": "code_mixed",
+      "text": "28 saal ki hoon, SC, Gujarat shehar, apna business hai, 3 lakh saal ka",
+      "profile": {
+        "age": 28,
+        "gender": "female",
+        "occupation": [
+          "self_employed"
+        ],
+        "annual_income_inr": 300000,
+        "state": "gujarat",
+        "category": "sc",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmsvanidhi",
+        "pmvishwakarma",
+        "standup-india"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pmsvanidhi",
+        "pmvishwakarma",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "unemployed-graduate-0",
+      "persona": "unemployed-graduate",
+      "phrasing": "plain",
+      "text": "I am 22, just finished my degree in Rajasthan and I am unemployed right now. My family income is about 2.5 lakh a year and we live in a town.",
+      "profile": {
+        "age": 22,
+        "occupation": [
+          "unemployed"
+        ],
+        "annual_income_inr": 250000,
+        "state": "rajasthan",
+        "residence": "urban",
+        "education_stage": "undergraduate"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "unemployed-graduate-1",
+      "persona": "unemployed-graduate",
+      "phrasing": "telegraphic",
+      "text": "22, unemployed graduate, Rajasthan, urban, family income 250000",
+      "profile": {
+        "age": 22,
+        "occupation": [
+          "unemployed"
+        ],
+        "annual_income_inr": 250000,
+        "state": "rajasthan",
+        "residence": "urban",
+        "education_stage": "undergraduate"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "unemployed-graduate-2",
+      "persona": "unemployed-graduate",
+      "phrasing": "code_mixed",
+      "text": "22 saal, degree khatam ki, abhi berozgar hoon, Rajasthan shehar, 2.5 lakh",
+      "profile": {
+        "age": 22,
+        "occupation": [
+          "unemployed"
+        ],
+        "annual_income_inr": 250000,
+        "state": "rajasthan",
+        "residence": "urban",
+        "education_stage": "undergraduate"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pm-internship",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "urban-lig-family-0",
+      "persona": "urban-lig-family",
+      "phrasing": "plain",
+      "text": "I am 41, in a private job in a city in Haryana, my annual income is 4.8 lakh and we do not own a house.",
+      "profile": {
+        "age": 41,
+        "occupation": [
+          "salaried"
+        ],
+        "annual_income_inr": 480000,
+        "state": "haryana",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "ignpdps",
+        "ignwps",
+        "nsap-nfbs",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "urban-lig-family-1",
+      "persona": "urban-lig-family",
+      "phrasing": "telegraphic",
+      "text": "salaried, 41, Haryana, urban, annual income 480000",
+      "profile": {
+        "age": 41,
+        "occupation": [
+          "salaried"
+        ],
+        "annual_income_inr": 480000,
+        "state": "haryana",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "ignpdps",
+        "ignwps",
+        "nsap-nfbs",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "urban-lig-family-2",
+      "persona": "urban-lig-family",
+      "phrasing": "code_mixed",
+      "text": "41 saal, private naukri, Haryana shehar, 4.8 lakh saal ka",
+      "profile": {
+        "age": 41,
+        "occupation": [
+          "salaried"
+        ],
+        "annual_income_inr": 480000,
+        "state": "haryana",
+        "residence": "urban"
+      },
+      "expected_schemes": [
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "ayushman-bharat",
+        "ignpdps",
+        "ignwps",
+        "nsap-nfbs",
+        "pmay-u",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "small-farmer-young-0",
+      "persona": "small-farmer-young",
+      "phrasing": "plain",
+      "text": "I am 29, a farmer in Punjab with 3 acres of land in my village, earning about 1.7 lakh a year.",
+      "profile": {
+        "age": 29,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 170000,
+        "land_acres": 3.0,
+        "state": "punjab",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "kcc",
+        "mgnrega",
+        "pm-kisan",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-kisan",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "small-farmer-young-1",
+      "persona": "small-farmer-young",
+      "phrasing": "telegraphic",
+      "text": "farmer, 29, Punjab, 3 acres, rural, income 170000",
+      "profile": {
+        "age": 29,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 170000,
+        "land_acres": 3.0,
+        "state": "punjab",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "kcc",
+        "mgnrega",
+        "pm-kisan",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-kisan",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "small-farmer-young-2",
+      "persona": "small-farmer-young",
+      "phrasing": "code_mixed",
+      "text": "29 saal ka kisan, Punjab, 3 acre zameen, gaon, 1.7 lakh",
+      "profile": {
+        "age": 29,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 170000,
+        "land_acres": 3.0,
+        "state": "punjab",
+        "residence": "rural"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "kcc",
+        "mgnrega",
+        "pm-kisan",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmsby"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "kcc",
+        "mgnrega",
+        "nmms",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "nsp-pre-matric-st",
+        "pm-kisan",
+        "pm-yasasvi",
+        "pmay-g",
+        "pmegp",
+        "pmfby",
+        "pmjjby",
+        "pmkmy",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "telangana-unmarried-girl-0",
+      "persona": "telangana-unmarried-girl",
+      "phrasing": "plain",
+      "text": "I am a 19 year old girl in Telangana, studying in a degree college, our family income is 1.2 lakh a year and we live in a village.",
+      "profile": {
+        "age": 19,
+        "gender": "female",
+        "annual_income_inr": 120000,
+        "state": "telangana",
+        "residence": "rural",
+        "occupation": [
+          "student"
+        ],
+        "education_stage": "undergraduate"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "ts-kalyana-lakshmi"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ts-kalyana-lakshmi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "telangana-unmarried-girl-1",
+      "persona": "telangana-unmarried-girl",
+      "phrasing": "telegraphic",
+      "text": "female, 19, Telangana, undergraduate student, rural, family income 120000",
+      "profile": {
+        "age": 19,
+        "gender": "female",
+        "annual_income_inr": 120000,
+        "state": "telangana",
+        "residence": "rural",
+        "occupation": [
+          "student"
+        ],
+        "education_stage": "undergraduate"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "ts-kalyana-lakshmi"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ts-kalyana-lakshmi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "telangana-unmarried-girl-2",
+      "persona": "telangana-unmarried-girl",
+      "phrasing": "code_mixed",
+      "text": "19 saal ki ladki hoon, Telangana, degree college, gaon, 1.2 lakh",
+      "profile": {
+        "age": 19,
+        "gender": "female",
+        "annual_income_inr": 120000,
+        "state": "telangana",
+        "residence": "rural",
+        "occupation": [
+          "student"
+        ],
+        "education_stage": "undergraduate"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "ts-kalyana-lakshmi"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nsap-nfbs",
+        "nsfdc-education-loan",
+        "nsp-post-matric-sc",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmmvy",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "standup-india",
+        "sukanya-samriddhi",
+        "ts-kalyana-lakshmi",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "tn-girl-college-0",
+      "persona": "tn-girl-college",
+      "phrasing": "plain",
+      "text": "I am an 18 year old girl from a village in Tamil Nadu who studied in a government school and is now in the first year of college. Family income is 1.4 lakh, OBC.",
+      "profile": {
+        "age": 18,
+        "gender": "female",
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 140000,
+        "state": "tamil nadu",
+        "education_stage": "undergraduate",
+        "residence": "rural",
+        "category": "obc"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmsby",
+        "pragati-scholarship",
+        "tn-moovalur-ramamirtham"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "sukanya-samriddhi",
+        "tn-moovalur-ramamirtham",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "tn-girl-college-1",
+      "persona": "tn-girl-college",
+      "phrasing": "telegraphic",
+      "text": "girl, 18, Tamil Nadu, undergraduate first year, rural, OBC, family income 140000",
+      "profile": {
+        "age": 18,
+        "gender": "female",
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 140000,
+        "state": "tamil nadu",
+        "education_stage": "undergraduate",
+        "residence": "rural",
+        "category": "obc"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmsby",
+        "pragati-scholarship",
+        "tn-moovalur-ramamirtham"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "sukanya-samriddhi",
+        "tn-moovalur-ramamirtham",
+        "ujjwala"
+      ]
+    },
+    {
+      "id": "tn-girl-college-2",
+      "persona": "tn-girl-college",
+      "phrasing": "code_mixed",
+      "text": "18 saal ki hoon, Tamil Nadu gaon, government school se padhi, ab college, 1.4 lakh, OBC",
+      "profile": {
+        "age": 18,
+        "gender": "female",
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 140000,
+        "state": "tamil nadu",
+        "education_stage": "undergraduate",
+        "residence": "rural",
+        "category": "obc"
+      },
+      "expected_schemes": [
+        "atal-pension",
+        "mgnrega",
+        "pmegp",
+        "pmjjby",
+        "pmsby",
+        "pragati-scholarship",
+        "tn-moovalur-ramamirtham"
+      ],
+      "acceptable_schemes": [
+        "atal-pension",
+        "ayushman-bharat",
+        "ignpdps",
+        "mgnrega",
+        "nsap-nfbs",
+        "pmay-g",
+        "pmegp",
+        "pmjjby",
+        "pmsby",
+        "pragati-scholarship",
+        "saksham-scholarship",
+        "sukanya-samriddhi",
+        "tn-moovalur-ramamirtham",
+        "ujjwala"
+      ]
+    }
+  ]
+}

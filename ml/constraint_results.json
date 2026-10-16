@@ -1,0 +1,41 @@
+{
+  "seed": 20260915,
+  "n_labelled": 4962,
+  "n_unlabelled": 6589,
+  "field_cols": [
+    "f_age",
+    "f_annual_income_inr",
+    "f_occupation",
+    "f_state",
+    "f_residence",
+    "f_gender",
+    "f_category",
+    "f_special_categories"
+  ],
+  "op_cols": [
+    "o_lt",
+    "o_lte",
+    "o_gt",
+    "o_gte",
+    "o_eq",
+    "o_contains_any",
+    "o_in"
+  ],
+  "results": {
+    "fields": {
+      "micro_f1": 0.9526592635885447,
+      "macro_f1": 0.9444287443263071,
+      "exact_match": 0.8990326481257558
+    },
+    "operators": {
+      "micro_f1": 0.9231640245875121,
+      "macro_f1": 0.8444659547397342,
+      "exact_match": 0.843409915356711
+    },
+    "exclusion": {
+      "micro_f1": 0.9713825070536074,
+      "macro_f1": 0.8682821669348615,
+      "exact_match": 0.9713825070536074
+    }
+  }
+}

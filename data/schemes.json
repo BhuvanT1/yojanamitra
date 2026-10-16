@@ -1,0 +1,1989 @@
+{
+  "provenance": {
+    "kind": "development-seed",
+    "note": "Paraphrased from publicly documented scheme criteria for development and evaluation. Not verified against the live portal. Run the scraper to replace these records with sourced text before making accuracy claims.",
+    "count": 40
+  },
+  "schemes": [
+    {
+      "id": "pm-kisan",
+      "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Agriculture and Farmers Welfare",
+      "category": [
+        "agriculture",
+        "income support"
+      ],
+      "benefits": "Income support of Rs. 6,000 per year paid in three equal four-monthly instalments directly into the beneficiary's bank account.",
+      "clauses": [
+        {
+          "id": "pm-kisan-c1",
+          "text": "The beneficiary must be a member of a landholding farmer family that owns cultivable land.",
+          "constraint": {
+            "field": "occupation",
+            "op": "in",
+            "value": [
+              "farmer"
+            ]
+          }
+        },
+        {
+          "id": "pm-kisan-c2",
+          "text": "The applicant must hold cultivable land in their own name; landless agricultural labourers are not covered.",
+          "constraint": {
+            "field": "land_acres",
+            "op": ">",
+            "value": 0
+          }
+        },
+        {
+          "id": "pm-kisan-c3",
+          "text": "Institutional landholders, income-tax payers and serving or retired government employees drawing a pension above Rs. 10,000 per month stand excluded.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 700000
+          }
+        },
+        {
+          "id": "pm-kisan-c4",
+          "text": "Aadhaar seeding of the beneficiary's bank account and completion of e-KYC is mandatory for release of instalments.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Land records (RoR / pahani)",
+        "Bank passbook",
+        "Citizenship certificate"
+      ],
+      "apply_url": "https://pmkisan.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pm-kisan",
+      "last_verified": null
+    },
+    {
+      "id": "pmfby",
+      "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Agriculture and Farmers Welfare",
+      "category": [
+        "agriculture",
+        "insurance"
+      ],
+      "benefits": "Crop insurance against yield loss from natural calamity, pest and disease, at a farmer premium of 2% for kharif, 1.5% for rabi and 5% for commercial and horticultural crops.",
+      "clauses": [
+        {
+          "id": "pmfby-c1",
+          "text": "All farmers growing notified crops in a notified area, including sharecroppers and tenant farmers, are eligible to enrol.",
+          "constraint": {
+            "field": "occupation",
+            "op": "in",
+            "value": [
+              "farmer"
+            ]
+          }
+        },
+        {
+          "id": "pmfby-c2",
+          "text": "The farmer must have an insurable interest in the notified crop, evidenced by land records or a valid tenancy agreement.",
+          "constraint": null
+        },
+        {
+          "id": "pmfby-c3",
+          "text": "Enrolment is voluntary for all farmers following the 2020 revision of the scheme.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Land records",
+        "Sowing certificate",
+        "Bank passbook"
+      ],
+      "apply_url": "https://pmfby.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmfby",
+      "last_verified": null
+    },
+    {
+      "id": "kcc",
+      "name": "Kisan Credit Card (KCC)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Agriculture and Farmers Welfare",
+      "category": [
+        "agriculture",
+        "credit"
+      ],
+      "benefits": "Short-term crop loan at a concessional interest rate, with interest subvention and prompt-repayment incentive reducing the effective rate to about 4% per annum.",
+      "clauses": [
+        {
+          "id": "kcc-c1",
+          "text": "All farmers who are individual or joint cultivators and owner-cultivators are eligible.",
+          "constraint": {
+            "field": "occupation",
+            "op": "in",
+            "value": [
+              "farmer"
+            ]
+          }
+        },
+        {
+          "id": "kcc-c2",
+          "text": "Tenant farmers, oral lessees, sharecroppers and members of joint liability groups are also covered.",
+          "constraint": null
+        },
+        {
+          "id": "kcc-c3",
+          "text": "The applicant must have attained 18 years of age and must not exceed 75 years at the time of application.",
+          "constraint": {
+            "field": "age",
+            "op": "between",
+            "value": [
+              18,
+              75
+            ]
+          }
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Land records",
+        "Passport-size photograph",
+        "Bank account details"
+      ],
+      "apply_url": "https://www.myscheme.gov.in/schemes/kcc",
+      "source_url": "https://www.myscheme.gov.in/schemes/kcc",
+      "last_verified": null
+    },
+    {
+      "id": "pmkmy",
+      "name": "Pradhan Mantri Kisan Maandhan Yojana (PM-KMY)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Agriculture and Farmers Welfare",
+      "category": [
+        "agriculture",
+        "pension"
+      ],
+      "benefits": "Assured monthly pension of Rs. 3,000 after the age of 60, against a matched monthly contribution during the enrolment period.",
+      "clauses": [
+        {
+          "id": "pmkmy-c1",
+          "text": "The scheme is open to small and marginal farmers cultivating up to 2 hectares of land.",
+          "constraint": {
+            "field": "land_acres",
+            "op": "<=",
+            "value": 4.94
+          }
+        },
+        {
+          "id": "pmkmy-c2",
+          "text": "The applicant must be a farmer by occupation.",
+          "constraint": {
+            "field": "occupation",
+            "op": "in",
+            "value": [
+              "farmer"
+            ]
+          }
+        },
+        {
+          "id": "pmkmy-c3",
+          "text": "The entry age of the applicant must be between 18 and 40 years.",
+          "constraint": {
+            "field": "age",
+            "op": "between",
+            "value": [
+              18,
+              40
+            ]
+          }
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Land records",
+        "Savings bank account",
+        "Consent form for auto-debit"
+      ],
+      "apply_url": "https://maandhan.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pm-kmy",
+      "last_verified": null
+    },
+    {
+      "id": "pmvishwakarma",
+      "name": "PM Vishwakarma",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Micro, Small and Medium Enterprises",
+      "category": [
+        "employment",
+        "artisans",
+        "credit",
+        "skill"
+      ],
+      "benefits": "Skill training with a stipend, a toolkit incentive of Rs. 15,000, and collateral-free enterprise loans of up to Rs. 3 lakh at a concessional 5% interest rate.",
+      "clauses": [
+        {
+          "id": "pmvishwakarma-c1",
+          "text": "The applicant must be an artisan or craftsperson working with their hands and tools in one of the eighteen notified family-based trades.",
+          "constraint": {
+            "field": "occupation",
+            "op": "in",
+            "value": [
+              "weaver",
+              "self_employed"
+            ]
+          }
+        },
+        {
+          "id": "pmvishwakarma-c2",
+          "text": "The applicant must have completed 18 years of age on the date of registration.",
+          "constraint": {
+            "field": "age",
+            "op": ">=",
+            "value": 18
+          }
+        },
+        {
+          "id": "pmvishwakarma-c3",
+          "text": "Persons in government service and their family members are not eligible for benefits under this scheme.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Bank passbook",
+        "Ration card",
+        "Caste or trade certificate where applicable"
+      ],
+      "apply_url": "https://pmvishwakarma.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pm-vishwakarma",
+      "last_verified": null
+    },
+    {
+      "id": "nsp-post-matric-sc",
+      "name": "Post Matric Scholarship for Scheduled Caste Students",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Social Justice and Empowerment",
+      "category": [
+        "education",
+        "scholarship"
+      ],
+      "benefits": "Full reimbursement of tuition and non-refundable fees plus a monthly maintenance allowance for students pursuing post-matriculation courses.",
+      "clauses": [
+        {
+          "id": "nsp-post-matric-sc-c1",
+          "text": "The applicant must belong to a Scheduled Caste as notified by the Government of India.",
+          "constraint": {
+            "field": "category",
+            "op": "in",
+            "value": [
+              "sc"
+            ]
+          }
+        },
+        {
+          "id": "nsp-post-matric-sc-c2",
+          "text": "The annual income of the parents or guardians from all sources must not exceed Rs. 2,50,000.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 250000
+          }
+        },
+        {
+          "id": "nsp-post-matric-sc-c3",
+          "text": "The applicant must be studying at a post-matriculation stage, that is Class 11 or above, in a recognised institution.",
+          "constraint": {
+            "field": "education_stage",
+            "op": "in",
+            "value": [
+              "class_11_12",
+              "undergraduate",
+              "postgraduate",
+              "doctoral"
+            ]
+          }
+        }
+      ],
+      "documents": [
+        "Caste certificate",
+        "Income certificate",
+        "Institution bonafide certificate",
+        "Aadhaar card",
+        "Bank passbook"
+      ],
+      "apply_url": "https://scholarships.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmsss",
+      "last_verified": null
+    },
+    {
+      "id": "nsp-pre-matric-st",
+      "name": "Pre Matric Scholarship for Scheduled Tribe Students (Class 9 and 10)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Tribal Affairs",
+      "category": [
+        "education",
+        "scholarship"
+      ],
+      "benefits": "Monthly scholarship and an annual book grant for Scheduled Tribe students in Classes 9 and 10.",
+      "clauses": [
+        {
+          "id": "nsp-pre-matric-st-c1",
+          "text": "The student must belong to a Scheduled Tribe.",
+          "constraint": {
+            "field": "category",
+            "op": "in",
+            "value": [
+              "st"
+            ]
+          }
+        },
+        {
+          "id": "nsp-pre-matric-st-c2",
+          "text": "The student must be enrolled in Class 9 or Class 10 in a government or recognised school.",
+          "constraint": {
+            "field": "education_stage",
+            "op": "in",
+            "value": [
+              "class_9_10"
+            ]
+          }
+        },
+        {
+          "id": "nsp-pre-matric-st-c3",
+          "text": "The annual income of the parents or guardians must not exceed Rs. 2,50,000 from all sources.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 250000
+          }
+        }
+      ],
+      "documents": [
+        "Tribe certificate",
+        "Income certificate",
+        "School bonafide certificate",
+        "Bank passbook"
+      ],
+      "apply_url": "https://scholarships.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmss-st",
+      "last_verified": null
+    },
+    {
+      "id": "nmms",
+      "name": "National Means-cum-Merit Scholarship (NMMSS)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Education",
+      "category": [
+        "education",
+        "scholarship"
+      ],
+      "benefits": "Scholarship of Rs. 12,000 per annum to meritorious students of economically weaker sections to arrest drop-out at Class 8 and support study through Class 12.",
+      "clauses": [
+        {
+          "id": "nmms-c1",
+          "text": "The student must be studying in Class 9 to Class 12 in a government, local body or government-aided school.",
+          "constraint": {
+            "field": "education_stage",
+            "op": "in",
+            "value": [
+              "class_9_10",
+              "class_11_12",
+              "class_9_12"
+            ]
+          }
+        },
+        {
+          "id": "nmms-c2",
+          "text": "The annual income of parents from all sources must not exceed Rs. 3,50,000.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 350000
+          }
+        },
+        {
+          "id": "nmms-c3",
+          "text": "The student must have secured at least 55% marks in the Class 7 examination, with relaxation for reserved categories.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Income certificate",
+        "Previous year marksheet",
+        "School bonafide certificate",
+        "Bank passbook"
+      ],
+      "apply_url": "https://scholarships.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/nmmss",
+      "last_verified": null
+    },
+    {
+      "id": "pragati-scholarship",
+      "name": "AICTE Pragati Scholarship for Girl Students",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Education",
+      "category": [
+        "education",
+        "scholarship",
+        "women"
+      ],
+      "benefits": "Scholarship of Rs. 50,000 per annum towards tuition fees and incidentals for girl students in AICTE-approved technical degree and diploma programmes.",
+      "clauses": [
+        {
+          "id": "pragati-scholarship-c1",
+          "text": "The applicant must be a girl student admitted to the first year of an AICTE-approved technical degree or diploma programme.",
+          "constraint": {
+            "field": "gender",
+            "op": "==",
+            "value": "female"
+          }
+        },
+        {
+          "id": "pragati-scholarship-c2",
+          "text": "The applicant must be pursuing an undergraduate technical course.",
+          "constraint": {
+            "field": "education_stage",
+            "op": "in",
+            "value": [
+              "undergraduate"
+            ]
+          }
+        },
+        {
+          "id": "pragati-scholarship-c3",
+          "text": "The family income from all sources must not exceed Rs. 8,00,000 per annum.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 800000
+          }
+        }
+      ],
+      "documents": [
+        "Admission letter",
+        "Income certificate",
+        "Class 12 marksheet",
+        "Aadhaar card",
+        "Bank passbook"
+      ],
+      "apply_url": "https://scholarships.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pragati",
+      "last_verified": null
+    },
+    {
+      "id": "saksham-scholarship",
+      "name": "AICTE Saksham Scholarship for Specially-Abled Students",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Education",
+      "category": [
+        "education",
+        "scholarship",
+        "disability"
+      ],
+      "benefits": "Scholarship of Rs. 50,000 per annum for specially-abled students pursuing AICTE-approved technical degree or diploma programmes.",
+      "clauses": [
+        {
+          "id": "saksham-scholarship-c1",
+          "text": "The applicant must be a specially-abled student with not less than 40% disability.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains",
+            "value": "differently_abled"
+          }
+        },
+        {
+          "id": "saksham-scholarship-c2",
+          "text": "The applicant must be pursuing a technical degree or diploma course.",
+          "constraint": {
+            "field": "education_stage",
+            "op": "in",
+            "value": [
+              "undergraduate"
+            ]
+          }
+        },
+        {
+          "id": "saksham-scholarship-c3",
+          "text": "The family income from all sources must not exceed Rs. 8,00,000 per annum.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 800000
+          }
+        }
+      ],
+      "documents": [
+        "Disability certificate",
+        "Income certificate",
+        "Admission letter",
+        "Bank passbook"
+      ],
+      "apply_url": "https://scholarships.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/saksham",
+      "last_verified": null
+    },
+    {
+      "id": "sukanya-samriddhi",
+      "name": "Sukanya Samriddhi Yojana",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Finance",
+      "category": [
+        "women",
+        "savings",
+        "girl child"
+      ],
+      "benefits": "Small savings account for a girl child carrying a high fixed rate of interest, with deposits qualifying for deduction under Section 80C and tax-free maturity proceeds.",
+      "clauses": [
+        {
+          "id": "sukanya-samriddhi-c1",
+          "text": "The account may be opened by a guardian in the name of a girl child who has not attained the age of ten years.",
+          "constraint": {
+            "field": "dependents",
+            "op": "contains_dependent",
+            "value": {
+              "gender": "female",
+              "max_age": 10
+            }
+          }
+        },
+        {
+          "id": "sukanya-samriddhi-c2",
+          "text": "A maximum of two accounts may be opened in a family, one for each of two girl children.",
+          "constraint": null
+        },
+        {
+          "id": "sukanya-samriddhi-c3",
+          "text": "A minimum deposit of Rs. 250 and a maximum of Rs. 1,50,000 may be made in a financial year.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Birth certificate of the girl child",
+        "Guardian's identity proof",
+        "Guardian's address proof"
+      ],
+      "apply_url": "https://www.indiapost.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/ssa",
+      "last_verified": null
+    },
+    {
+      "id": "pmmvy",
+      "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Women and Child Development",
+      "category": [
+        "women",
+        "maternity",
+        "health"
+      ],
+      "benefits": "Conditional maternity benefit of Rs. 5,000 for the first living child, and Rs. 6,000 for a second child if that child is a girl.",
+      "clauses": [
+        {
+          "id": "pmmvy-c1",
+          "text": "The beneficiary must be a pregnant woman or lactating mother.",
+          "constraint": {
+            "field": "gender",
+            "op": "==",
+            "value": "female"
+          }
+        },
+        {
+          "id": "pmmvy-c2",
+          "text": "The beneficiary must have attained the age of 19 years or above on the date of the last menstrual period.",
+          "constraint": {
+            "field": "age",
+            "op": ">=",
+            "value": 19
+          }
+        },
+        {
+          "id": "pmmvy-c3",
+          "text": "Women in regular employment with the Central or State Government or a public sector undertaking, who receive similar benefits, are excluded.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "MCP card",
+        "Bank passbook",
+        "Husband's Aadhaar card"
+      ],
+      "apply_url": "https://pmmvy.wcd.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmmvy",
+      "last_verified": null
+    },
+    {
+      "id": "ujjwala",
+      "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Petroleum and Natural Gas",
+      "category": [
+        "women",
+        "energy",
+        "household"
+      ],
+      "benefits": "A deposit-free LPG connection with the first refill and stove provided free of cost to the woman of an eligible household.",
+      "clauses": [
+        {
+          "id": "ujjwala-c1",
+          "text": "The applicant must be an adult woman belonging to a poor household.",
+          "constraint": {
+            "field": "gender",
+            "op": "==",
+            "value": "female"
+          }
+        },
+        {
+          "id": "ujjwala-c2",
+          "text": "The applicant must have attained 18 years of age.",
+          "constraint": {
+            "field": "age",
+            "op": ">=",
+            "value": 18
+          }
+        },
+        {
+          "id": "ujjwala-c3",
+          "text": "No other LPG connection may exist in the applicant's household in the name of any family member.",
+          "constraint": null
+        },
+        {
+          "id": "ujjwala-c4",
+          "text": "The household must belong to one of the notified poor categories, including SC or ST households, beneficiaries under Antyodaya Anna Yojana and the poorest families identified through the fourteen-point declaration.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains_any",
+            "value": [
+              "bpl",
+              "landless"
+            ]
+          }
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Ration card",
+        "Bank passbook",
+        "KYC declaration"
+      ],
+      "apply_url": "https://www.pmuy.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmuy",
+      "last_verified": null
+    },
+    {
+      "id": "pmay-g",
+      "name": "Pradhan Mantri Awaas Yojana - Gramin (PMAY-G)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Rural Development",
+      "category": [
+        "housing",
+        "rural"
+      ],
+      "benefits": "Assistance of Rs. 1.20 lakh in plain areas and Rs. 1.30 lakh in hilly and difficult areas for construction of a pucca house with a toilet and other basic amenities.",
+      "clauses": [
+        {
+          "id": "pmay-g-c1",
+          "text": "The beneficiary must be a rural household that is houseless or living in a kutcha or dilapidated house.",
+          "constraint": {
+            "field": "residence",
+            "op": "==",
+            "value": "rural"
+          }
+        },
+        {
+          "id": "pmay-g-c2",
+          "text": "The household must be identified as deprived under the prescribed socio-economic criteria and verified by the Gram Sabha.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains_any",
+            "value": [
+              "bpl",
+              "landless"
+            ]
+          }
+        },
+        {
+          "id": "pmay-g-c3",
+          "text": "Households owning a pucca house, a motorised vehicle or a Kisan Credit Card with a limit above Rs. 50,000 are excluded.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Job card under MGNREGA",
+        "Bank passbook",
+        "Swachh Bharat Mission registration number"
+      ],
+      "apply_url": "https://pmayg.nic.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmayg",
+      "last_verified": null
+    },
+    {
+      "id": "pmay-u",
+      "name": "Pradhan Mantri Awaas Yojana - Urban (PMAY-U)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Housing and Urban Affairs",
+      "category": [
+        "housing",
+        "urban"
+      ],
+      "benefits": "Interest subsidy on home loans and assistance for construction or enhancement of a dwelling unit for eligible urban households.",
+      "clauses": [
+        {
+          "id": "pmay-u-c1",
+          "text": "The beneficiary family must reside in an urban area covered by the mission.",
+          "constraint": {
+            "field": "residence",
+            "op": "==",
+            "value": "urban"
+          }
+        },
+        {
+          "id": "pmay-u-c2",
+          "text": "The annual household income must fall within the economically weaker section or low income group ceiling of Rs. 6,00,000.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 600000
+          }
+        },
+        {
+          "id": "pmay-u-c3",
+          "text": "The beneficiary family must not own a pucca house in any part of India in the name of any family member.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Income certificate",
+        "Property documents",
+        "Bank statement"
+      ],
+      "apply_url": "https://pmaymis.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmayu",
+      "last_verified": null
+    },
+    {
+      "id": "ayushman-bharat",
+      "name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB PM-JAY)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Health and Family Welfare",
+      "category": [
+        "health",
+        "insurance"
+      ],
+      "benefits": "Health cover of Rs. 5 lakh per family per year for secondary and tertiary care hospitalisation at empanelled public and private hospitals.",
+      "clauses": [
+        {
+          "id": "ayushman-bharat-c1",
+          "text": "Families identified as deprived under the prescribed rural and urban occupational criteria of the socio-economic census are entitled to the cover.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains_any",
+            "value": [
+              "bpl",
+              "landless"
+            ]
+          }
+        },
+        {
+          "id": "ayushman-bharat-c2",
+          "text": "There is no cap on family size, age or gender for members of an entitled family.",
+          "constraint": null
+        },
+        {
+          "id": "ayushman-bharat-c3",
+          "text": "All pre-existing conditions are covered from the first day of entitlement.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Ration card",
+        "Family identification document"
+      ],
+      "apply_url": "https://pmjay.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmjay",
+      "last_verified": null
+    },
+    {
+      "id": "vay-vandana",
+      "name": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Rural Development",
+      "category": [
+        "pension",
+        "social welfare",
+        "senior citizen"
+      ],
+      "benefits": "Monthly old-age pension to elderly persons from below-poverty-line households, paid through the state government with an additional state top-up in most states.",
+      "clauses": [
+        {
+          "id": "vay-vandana-c1",
+          "text": "The applicant must have attained the age of 60 years.",
+          "constraint": {
+            "field": "age",
+            "op": ">=",
+            "value": 60
+          }
+        },
+        {
+          "id": "vay-vandana-c2",
+          "text": "The applicant must belong to a household living below the poverty line as per the prescribed criteria.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains",
+            "value": "bpl"
+          }
+        }
+      ],
+      "documents": [
+        "Age proof",
+        "BPL certificate",
+        "Aadhaar card",
+        "Bank passbook"
+      ],
+      "apply_url": "https://nsap.nic.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/ignoaps",
+      "last_verified": null
+    },
+    {
+      "id": "ignwps",
+      "name": "Indira Gandhi National Widow Pension Scheme (IGNWPS)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Rural Development",
+      "category": [
+        "pension",
+        "social welfare",
+        "women"
+      ],
+      "benefits": "Monthly pension to widows from below-poverty-line households, disbursed by the state government along with any state top-up.",
+      "clauses": [
+        {
+          "id": "ignwps-c1",
+          "text": "The applicant must be a widow.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains",
+            "value": "widow"
+          }
+        },
+        {
+          "id": "ignwps-c2",
+          "text": "The applicant must be between 40 and 79 years of age.",
+          "constraint": {
+            "field": "age",
+            "op": "between",
+            "value": [
+              40,
+              79
+            ]
+          }
+        },
+        {
+          "id": "ignwps-c3",
+          "text": "The applicant must belong to a household living below the poverty line.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains",
+            "value": "bpl"
+          }
+        }
+      ],
+      "documents": [
+        "Death certificate of husband",
+        "BPL certificate",
+        "Age proof",
+        "Bank passbook"
+      ],
+      "apply_url": "https://nsap.nic.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/ignwps",
+      "last_verified": null
+    },
+    {
+      "id": "ignpdps",
+      "name": "Indira Gandhi National Disability Pension Scheme (IGNDPS)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Rural Development",
+      "category": [
+        "pension",
+        "social welfare",
+        "disability"
+      ],
+      "benefits": "Monthly pension to persons with severe or multiple disabilities from below-poverty-line households.",
+      "clauses": [
+        {
+          "id": "ignpdps-c1",
+          "text": "The applicant must have a severe or multiple disability of 80% or more.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains",
+            "value": "differently_abled"
+          }
+        },
+        {
+          "id": "ignpdps-c2",
+          "text": "The applicant must be between 18 and 79 years of age.",
+          "constraint": {
+            "field": "age",
+            "op": "between",
+            "value": [
+              18,
+              79
+            ]
+          }
+        },
+        {
+          "id": "ignpdps-c3",
+          "text": "The applicant must belong to a household living below the poverty line.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains",
+            "value": "bpl"
+          }
+        }
+      ],
+      "documents": [
+        "Disability certificate",
+        "BPL certificate",
+        "Aadhaar card",
+        "Bank passbook"
+      ],
+      "apply_url": "https://nsap.nic.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/igndps",
+      "last_verified": null
+    },
+    {
+      "id": "mgnrega",
+      "name": "Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Rural Development",
+      "category": [
+        "employment",
+        "rural",
+        "wages"
+      ],
+      "benefits": "A legal guarantee of at least 100 days of unskilled manual wage employment in a financial year to every rural household whose adult members volunteer for such work.",
+      "clauses": [
+        {
+          "id": "mgnrega-c1",
+          "text": "The applicant must be an adult member of a rural household willing to do unskilled manual work.",
+          "constraint": {
+            "field": "residence",
+            "op": "==",
+            "value": "rural"
+          }
+        },
+        {
+          "id": "mgnrega-c2",
+          "text": "The applicant must have completed 18 years of age.",
+          "constraint": {
+            "field": "age",
+            "op": ">=",
+            "value": 18
+          }
+        },
+        {
+          "id": "mgnrega-c3",
+          "text": "The household must be registered with the Gram Panchayat and hold a job card.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Residence proof",
+        "Passport-size photographs",
+        "Bank passbook"
+      ],
+      "apply_url": "https://nrega.nic.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/mgnrega",
+      "last_verified": null
+    },
+    {
+      "id": "pmsvanidhi",
+      "name": "PM Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Housing and Urban Affairs",
+      "category": [
+        "employment",
+        "credit",
+        "urban"
+      ],
+      "benefits": "Collateral-free working capital loan starting at Rs. 10,000 with an interest subsidy of 7% and a cashback incentive on digital transactions.",
+      "clauses": [
+        {
+          "id": "pmsvanidhi-c1",
+          "text": "The applicant must be a street vendor engaged in vending in urban areas.",
+          "constraint": {
+            "field": "occupation",
+            "op": "in",
+            "value": [
+              "shopkeeper",
+              "self_employed"
+            ]
+          }
+        },
+        {
+          "id": "pmsvanidhi-c2",
+          "text": "The vendor must hold a certificate of vending or an identity card issued by the urban local body, or be identified in the vending survey.",
+          "constraint": {
+            "field": "residence",
+            "op": "==",
+            "value": "urban"
+          }
+        }
+      ],
+      "documents": [
+        "Certificate of vending or ULB identity card",
+        "Aadhaar card",
+        "Bank passbook"
+      ],
+      "apply_url": "https://pmsvanidhi.mohua.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pm-svanidhi",
+      "last_verified": null
+    },
+    {
+      "id": "pmegp",
+      "name": "Prime Minister's Employment Generation Programme (PMEGP)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Micro, Small and Medium Enterprises",
+      "category": [
+        "employment",
+        "entrepreneurship",
+        "credit"
+      ],
+      "benefits": "Margin money subsidy of 15% to 35% of the project cost for setting up a new micro-enterprise in the manufacturing or service sector.",
+      "clauses": [
+        {
+          "id": "pmegp-c1",
+          "text": "The applicant must have attained 18 years of age.",
+          "constraint": {
+            "field": "age",
+            "op": ">=",
+            "value": 18
+          }
+        },
+        {
+          "id": "pmegp-c2",
+          "text": "For projects costing above Rs. 10 lakh in manufacturing or Rs. 5 lakh in the service sector, the applicant must have passed at least Class 8.",
+          "constraint": null
+        },
+        {
+          "id": "pmegp-c3",
+          "text": "Assistance is available only for new units; existing units and units already availing subsidy under another government scheme are not eligible.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Project report",
+        "Education certificate",
+        "Caste certificate where applicable"
+      ],
+      "apply_url": "https://www.kviconline.gov.in/pmegpeportal/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmegp",
+      "last_verified": null
+    },
+    {
+      "id": "standup-india",
+      "name": "Stand-Up India",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Finance",
+      "category": [
+        "entrepreneurship",
+        "credit",
+        "women"
+      ],
+      "benefits": "Bank loans between Rs. 10 lakh and Rs. 1 crore to at least one Scheduled Caste or Scheduled Tribe borrower and one woman borrower per bank branch, for setting up a greenfield enterprise.",
+      "clauses": [
+        {
+          "id": "standup-india-c1",
+          "text": "The borrower must belong to a Scheduled Caste or Scheduled Tribe, or must be a woman entrepreneur.",
+          "constraint": {
+            "field": "category",
+            "op": "in",
+            "value": [
+              "sc",
+              "st"
+            ]
+          }
+        },
+        {
+          "id": "standup-india-c2",
+          "text": "The borrower must have attained 18 years of age.",
+          "constraint": {
+            "field": "age",
+            "op": ">=",
+            "value": 18
+          }
+        },
+        {
+          "id": "standup-india-c3",
+          "text": "The enterprise must be a greenfield project, being the borrower's first venture in manufacturing, services, trading or agriculture-allied activity.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Caste certificate",
+        "Project report",
+        "Proof of business address"
+      ],
+      "apply_url": "https://www.standupmitra.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/sui",
+      "last_verified": null
+    },
+    {
+      "id": "nsap-nfbs",
+      "name": "National Family Benefit Scheme (NFBS)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Rural Development",
+      "category": [
+        "social welfare",
+        "one-time assistance"
+      ],
+      "benefits": "One-time assistance of Rs. 20,000 to a below-poverty-line household on the death of its primary breadwinner.",
+      "clauses": [
+        {
+          "id": "nsap-nfbs-c1",
+          "text": "The household must be living below the poverty line.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains",
+            "value": "bpl"
+          }
+        },
+        {
+          "id": "nsap-nfbs-c2",
+          "text": "The deceased primary breadwinner must have been between 18 and 59 years of age at the time of death.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Death certificate",
+        "BPL certificate",
+        "Bank passbook",
+        "Aadhaar card"
+      ],
+      "apply_url": "https://nsap.nic.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/nfbs",
+      "last_verified": null
+    },
+    {
+      "id": "ap-rythu-bharosa",
+      "name": "YSR Rythu Bharosa - PM KISAN (Andhra Pradesh)",
+      "level": "state",
+      "state": "andhra pradesh",
+      "ministry": "Department of Agriculture, Government of Andhra Pradesh",
+      "category": [
+        "agriculture",
+        "income support"
+      ],
+      "benefits": "Investment support to farmer families in the state, paid in instalments and inclusive of the central PM-KISAN component.",
+      "clauses": [
+        {
+          "id": "ap-rythu-bharosa-c1",
+          "text": "The beneficiary must be a landholding farmer family resident in Andhra Pradesh.",
+          "constraint": {
+            "field": "state",
+            "op": "in",
+            "value": [
+              "andhra pradesh"
+            ]
+          }
+        },
+        {
+          "id": "ap-rythu-bharosa-c2",
+          "text": "The beneficiary must be engaged in cultivation.",
+          "constraint": {
+            "field": "occupation",
+            "op": "in",
+            "value": [
+              "farmer"
+            ]
+          }
+        },
+        {
+          "id": "ap-rythu-bharosa-c3",
+          "text": "Landless tenant farmers and cultivators belonging to Scheduled Caste, Scheduled Tribe, Backward Class and Minority communities are also covered under the state component.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Land records (adangal)",
+        "Bank passbook",
+        "Ration card"
+      ],
+      "apply_url": "https://ysrrythubharosa.ap.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/ysr-rb",
+      "last_verified": null
+    },
+    {
+      "id": "ap-jagananna-vidya-deevena",
+      "name": "Jagananna Vidya Deevena (Andhra Pradesh)",
+      "level": "state",
+      "state": "andhra pradesh",
+      "ministry": "Department of Social Welfare, Government of Andhra Pradesh",
+      "category": [
+        "education",
+        "scholarship",
+        "fee reimbursement"
+      ],
+      "benefits": "Full reimbursement of tuition fees for eligible students pursuing higher education courses in the state.",
+      "clauses": [
+        {
+          "id": "ap-jagananna-vidya-deevena-c1",
+          "text": "The student's family must be resident in Andhra Pradesh.",
+          "constraint": {
+            "field": "state",
+            "op": "in",
+            "value": [
+              "andhra pradesh"
+            ]
+          }
+        },
+        {
+          "id": "ap-jagananna-vidya-deevena-c2",
+          "text": "The student must be pursuing a recognised course after Class 12, including ITI, polytechnic, degree and postgraduate programmes.",
+          "constraint": {
+            "field": "education_stage",
+            "op": "in",
+            "value": [
+              "undergraduate",
+              "postgraduate"
+            ]
+          }
+        },
+        {
+          "id": "ap-jagananna-vidya-deevena-c3",
+          "text": "The family income must not exceed Rs. 2,50,000 per annum and the family must not own more than 10 acres of wet land or 25 acres of dry land.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 250000
+          }
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Income certificate",
+        "Caste certificate",
+        "College admission proof",
+        "Rice card"
+      ],
+      "apply_url": "https://jnanabhumi.ap.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/jvd",
+      "last_verified": null
+    },
+    {
+      "id": "ts-rythu-bandhu",
+      "name": "Rythu Bandhu - Agriculture Investment Support (Telangana)",
+      "level": "state",
+      "state": "telangana",
+      "ministry": "Department of Agriculture, Government of Telangana",
+      "category": [
+        "agriculture",
+        "income support"
+      ],
+      "benefits": "Investment support per acre per season paid directly to landholding farmers for both the kharif and rabi seasons.",
+      "clauses": [
+        {
+          "id": "ts-rythu-bandhu-c1",
+          "text": "The beneficiary must be a landholding farmer with agricultural land recorded in Telangana.",
+          "constraint": {
+            "field": "state",
+            "op": "in",
+            "value": [
+              "telangana"
+            ]
+          }
+        },
+        {
+          "id": "ts-rythu-bandhu-c2",
+          "text": "The beneficiary must own cultivable land as per the state land records portal.",
+          "constraint": {
+            "field": "land_acres",
+            "op": ">",
+            "value": 0
+          }
+        },
+        {
+          "id": "ts-rythu-bandhu-c3",
+          "text": "The beneficiary must be a farmer by occupation.",
+          "constraint": {
+            "field": "occupation",
+            "op": "in",
+            "value": [
+              "farmer"
+            ]
+          }
+        }
+      ],
+      "documents": [
+        "Pattadar passbook",
+        "Aadhaar card",
+        "Bank passbook"
+      ],
+      "apply_url": "https://rythubandhu.telangana.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/rythu-bandhu",
+      "last_verified": null
+    },
+    {
+      "id": "ts-kalyana-lakshmi",
+      "name": "Kalyana Lakshmi / Shaadi Mubarak (Telangana)",
+      "level": "state",
+      "state": "telangana",
+      "ministry": "Department of Women Development and Child Welfare, Government of Telangana",
+      "category": [
+        "women",
+        "social welfare",
+        "marriage assistance"
+      ],
+      "benefits": "One-time financial assistance towards the marriage expenses of an unmarried girl from an eligible family in the state.",
+      "clauses": [
+        {
+          "id": "ts-kalyana-lakshmi-c1",
+          "text": "The applicant must be a resident of Telangana.",
+          "constraint": {
+            "field": "state",
+            "op": "in",
+            "value": [
+              "telangana"
+            ]
+          }
+        },
+        {
+          "id": "ts-kalyana-lakshmi-c2",
+          "text": "The beneficiary must be an unmarried girl who has completed 18 years of age at the time of marriage.",
+          "constraint": {
+            "field": "gender",
+            "op": "==",
+            "value": "female"
+          }
+        },
+        {
+          "id": "ts-kalyana-lakshmi-c3",
+          "text": "The annual income of the family must not exceed Rs. 2,00,000.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 200000
+          }
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Income certificate",
+        "Caste certificate",
+        "Age proof",
+        "Bank passbook"
+      ],
+      "apply_url": "https://telanganaepass.cgg.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/kalyana-lakshmi",
+      "last_verified": null
+    },
+    {
+      "id": "tn-moovalur-ramamirtham",
+      "name": "Moovalur Ramamirtham Ammaiyar Higher Education Assurance Scheme (Tamil Nadu)",
+      "level": "state",
+      "state": "tamil nadu",
+      "ministry": "Department of Social Welfare, Government of Tamil Nadu",
+      "category": [
+        "education",
+        "women",
+        "scholarship"
+      ],
+      "benefits": "Monthly assistance of Rs. 1,000 to girl students from government schools until they complete an undergraduate, diploma or ITI course.",
+      "clauses": [
+        {
+          "id": "tn-moovalur-ramamirtham-c1",
+          "text": "The student must be a girl who studied Classes 6 to 12 in a government school in Tamil Nadu.",
+          "constraint": {
+            "field": "gender",
+            "op": "==",
+            "value": "female"
+          }
+        },
+        {
+          "id": "tn-moovalur-ramamirtham-c2",
+          "text": "The student must be a resident of Tamil Nadu.",
+          "constraint": {
+            "field": "state",
+            "op": "in",
+            "value": [
+              "tamil nadu"
+            ]
+          }
+        },
+        {
+          "id": "tn-moovalur-ramamirtham-c3",
+          "text": "The student must be pursuing higher education after Class 12.",
+          "constraint": {
+            "field": "education_stage",
+            "op": "in",
+            "value": [
+              "undergraduate"
+            ]
+          }
+        }
+      ],
+      "documents": [
+        "School study certificate",
+        "Aadhaar card",
+        "College admission proof",
+        "Bank passbook"
+      ],
+      "apply_url": "https://penkalvi.tn.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/mrahes",
+      "last_verified": null
+    },
+    {
+      "id": "mh-mahatma-phule-jan-arogya",
+      "name": "Mahatma Jyotirao Phule Jan Arogya Yojana (Maharashtra)",
+      "level": "state",
+      "state": "maharashtra",
+      "ministry": "Public Health Department, Government of Maharashtra",
+      "category": [
+        "health",
+        "insurance"
+      ],
+      "benefits": "Cashless health cover per family per year for listed surgeries and therapies at empanelled hospitals in the state.",
+      "clauses": [
+        {
+          "id": "mh-mahatma-phule-jan-arogya-c1",
+          "text": "The beneficiary family must be resident in Maharashtra.",
+          "constraint": {
+            "field": "state",
+            "op": "in",
+            "value": [
+              "maharashtra"
+            ]
+          }
+        },
+        {
+          "id": "mh-mahatma-phule-jan-arogya-c2",
+          "text": "The family must hold a yellow, orange, Antyodaya or Annapurna ration card, or belong to a notified distressed district.",
+          "constraint": {
+            "field": "special_categories",
+            "op": "contains",
+            "value": "bpl"
+          }
+        }
+      ],
+      "documents": [
+        "Ration card",
+        "Aadhaar card",
+        "Health card"
+      ],
+      "apply_url": "https://www.jeevandayee.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/mjpjay",
+      "last_verified": null
+    },
+    {
+      "id": "up-kanya-sumangala",
+      "name": "Mukhyamantri Kanya Sumangala Yojana (Uttar Pradesh)",
+      "level": "state",
+      "state": "uttar pradesh",
+      "ministry": "Department of Women and Child Development, Government of Uttar Pradesh",
+      "category": [
+        "women",
+        "girl child",
+        "education"
+      ],
+      "benefits": "Staged financial assistance to a girl child from birth through to graduation, released across six defined milestones.",
+      "clauses": [
+        {
+          "id": "up-kanya-sumangala-c1",
+          "text": "The applicant family must be resident in Uttar Pradesh.",
+          "constraint": {
+            "field": "state",
+            "op": "in",
+            "value": [
+              "uttar pradesh"
+            ]
+          }
+        },
+        {
+          "id": "up-kanya-sumangala-c2",
+          "text": "The benefit is payable in respect of a girl child in the family.",
+          "constraint": {
+            "field": "dependents",
+            "op": "contains_dependent",
+            "value": {
+              "gender": "female"
+            }
+          }
+        },
+        {
+          "id": "up-kanya-sumangala-c3",
+          "text": "The annual family income must not exceed Rs. 3,00,000.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 300000
+          }
+        },
+        {
+          "id": "up-kanya-sumangala-c4",
+          "text": "The benefit is limited to a maximum of two girl children in a family.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Income certificate",
+        "Birth certificate of the girl child",
+        "Bank passbook"
+      ],
+      "apply_url": "https://mksy.up.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/mksy",
+      "last_verified": null
+    },
+    {
+      "id": "ka-vidyasiri",
+      "name": "Vidyasiri Food and Accommodation Scholarship (Karnataka)",
+      "level": "state",
+      "state": "karnataka",
+      "ministry": "Department of Backward Classes Welfare, Government of Karnataka",
+      "category": [
+        "education",
+        "scholarship"
+      ],
+      "benefits": "Monthly food and accommodation assistance to students who could not secure a place in a government hostel.",
+      "clauses": [
+        {
+          "id": "ka-vidyasiri-c1",
+          "text": "The student must be a resident of Karnataka.",
+          "constraint": {
+            "field": "state",
+            "op": "in",
+            "value": [
+              "karnataka"
+            ]
+          }
+        },
+        {
+          "id": "ka-vidyasiri-c2",
+          "text": "The student must be pursuing post-matriculation studies and must not be residing in a government hostel.",
+          "constraint": {
+            "field": "education_stage",
+            "op": "in",
+            "value": [
+              "class_11_12",
+              "undergraduate",
+              "postgraduate"
+            ]
+          }
+        },
+        {
+          "id": "ka-vidyasiri-c3",
+          "text": "The annual family income must not exceed Rs. 2,50,000.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 250000
+          }
+        }
+      ],
+      "documents": [
+        "Caste certificate",
+        "Income certificate",
+        "College bonafide certificate",
+        "Bank passbook"
+      ],
+      "apply_url": "https://sw.kar.nic.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/vidyasiri",
+      "last_verified": null
+    },
+    {
+      "id": "pm-yasasvi",
+      "name": "PM YASASVI Pre-Matric Scholarship for OBC, EBC and DNT Students",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Social Justice and Empowerment",
+      "category": [
+        "education",
+        "scholarship"
+      ],
+      "benefits": "Pre-matric scholarship for students of Other Backward Classes, Economically Backward Classes and Denotified Tribes studying in Classes 9 and 10.",
+      "clauses": [
+        {
+          "id": "pm-yasasvi-c1",
+          "text": "The student must belong to an Other Backward Class, Economically Backward Class or Denotified Tribe.",
+          "constraint": {
+            "field": "category",
+            "op": "in",
+            "value": [
+              "obc"
+            ]
+          }
+        },
+        {
+          "id": "pm-yasasvi-c2",
+          "text": "The student must be studying in Class 9 or Class 10.",
+          "constraint": {
+            "field": "education_stage",
+            "op": "in",
+            "value": [
+              "class_9_10"
+            ]
+          }
+        },
+        {
+          "id": "pm-yasasvi-c3",
+          "text": "The annual income of the parents from all sources must not exceed Rs. 2,50,000.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 250000
+          }
+        }
+      ],
+      "documents": [
+        "Caste certificate",
+        "Income certificate",
+        "School bonafide certificate",
+        "Bank passbook"
+      ],
+      "apply_url": "https://yet.nta.ac.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/yasasvi",
+      "last_verified": null
+    },
+    {
+      "id": "nsfdc-education-loan",
+      "name": "NSFDC Educational Loan for Scheduled Caste Students",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Social Justice and Empowerment",
+      "category": [
+        "education",
+        "credit"
+      ],
+      "benefits": "Concessional educational loan for professional and technical courses in India and abroad, at a low rate of interest with a further concession for women.",
+      "clauses": [
+        {
+          "id": "nsfdc-education-loan-c1",
+          "text": "The applicant must belong to a Scheduled Caste.",
+          "constraint": {
+            "field": "category",
+            "op": "in",
+            "value": [
+              "sc"
+            ]
+          }
+        },
+        {
+          "id": "nsfdc-education-loan-c2",
+          "text": "The annual family income must be within the double-the-poverty-line limit of Rs. 3,00,000.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 300000
+          }
+        },
+        {
+          "id": "nsfdc-education-loan-c3",
+          "text": "The applicant must have secured admission to a recognised professional or technical course.",
+          "constraint": {
+            "field": "education_stage",
+            "op": "in",
+            "value": [
+              "undergraduate",
+              "postgraduate",
+              "doctoral"
+            ]
+          }
+        }
+      ],
+      "documents": [
+        "Caste certificate",
+        "Income certificate",
+        "Admission letter",
+        "Fee structure"
+      ],
+      "apply_url": "https://nsfdc.nic.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/nsfdc-el",
+      "last_verified": null
+    },
+    {
+      "id": "matsya-sampada",
+      "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+      "level": "central",
+      "state": null,
+      "ministry": "Department of Fisheries",
+      "category": [
+        "fisheries",
+        "livelihood",
+        "subsidy"
+      ],
+      "benefits": "Subsidy support for fish production infrastructure, livelihood assistance during the fishing ban period and insurance cover for active fishers.",
+      "clauses": [
+        {
+          "id": "matsya-sampada-c1",
+          "text": "The applicant must be a fisher, fish farmer or fish worker.",
+          "constraint": {
+            "field": "occupation",
+            "op": "in",
+            "value": [
+              "fisherman"
+            ]
+          }
+        },
+        {
+          "id": "matsya-sampada-c2",
+          "text": "Beneficiaries from Scheduled Caste, Scheduled Tribe and women categories receive an enhanced subsidy of 60% against the general rate of 40%.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Fisher identity card",
+        "Bank passbook",
+        "Project proposal"
+      ],
+      "apply_url": "https://pmmsy.dof.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmmsy",
+      "last_verified": null
+    },
+    {
+      "id": "handloom-weavers-mudra",
+      "name": "Weavers' MUDRA Scheme",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Textiles",
+      "category": [
+        "credit",
+        "artisans",
+        "employment"
+      ],
+      "benefits": "Margin money assistance and concessional working capital credit at 6% interest for handloom weavers and weaver entrepreneurs.",
+      "clauses": [
+        {
+          "id": "handloom-weavers-mudra-c1",
+          "text": "The applicant must be a handloom weaver or a weaver entrepreneur.",
+          "constraint": {
+            "field": "occupation",
+            "op": "in",
+            "value": [
+              "weaver"
+            ]
+          }
+        },
+        {
+          "id": "handloom-weavers-mudra-c2",
+          "text": "The applicant must hold a valid weaver identity card issued under the handloom census.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Weaver identity card",
+        "Aadhaar card",
+        "Bank passbook"
+      ],
+      "apply_url": "https://handloom.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/wms",
+      "last_verified": null
+    },
+    {
+      "id": "pm-internship",
+      "name": "PM Internship Scheme",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Corporate Affairs",
+      "category": [
+        "employment",
+        "skill",
+        "youth"
+      ],
+      "benefits": "A twelve-month internship in a top company with a monthly stipend and a one-time grant, aimed at improving employability of young people.",
+      "clauses": [
+        {
+          "id": "pm-internship-c1",
+          "text": "The applicant must be between 21 and 24 years of age.",
+          "constraint": {
+            "field": "age",
+            "op": "between",
+            "value": [
+              21,
+              24
+            ]
+          }
+        },
+        {
+          "id": "pm-internship-c2",
+          "text": "The applicant must not be employed full-time or enrolled in full-time education at the time of the internship.",
+          "constraint": null
+        },
+        {
+          "id": "pm-internship-c3",
+          "text": "The annual family income must not exceed Rs. 8,00,000 and no family member may be in a permanent government job.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 800000
+          }
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Education certificates",
+        "Income declaration",
+        "Bank passbook"
+      ],
+      "apply_url": "https://pminternship.mca.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmis",
+      "last_verified": null
+    },
+    {
+      "id": "atal-pension",
+      "name": "Atal Pension Yojana (APY)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Finance",
+      "category": [
+        "pension",
+        "savings"
+      ],
+      "benefits": "Guaranteed monthly pension between Rs. 1,000 and Rs. 5,000 from the age of 60, based on the contribution chosen at enrolment.",
+      "clauses": [
+        {
+          "id": "atal-pension-c1",
+          "text": "The subscriber must be between 18 and 40 years of age at the time of joining.",
+          "constraint": {
+            "field": "age",
+            "op": "between",
+            "value": [
+              18,
+              40
+            ]
+          }
+        },
+        {
+          "id": "atal-pension-c2",
+          "text": "The subscriber must hold a savings bank account and must not be an income-tax payer.",
+          "constraint": {
+            "field": "annual_income_inr",
+            "op": "<=",
+            "value": 700000
+          }
+        },
+        {
+          "id": "atal-pension-c3",
+          "text": "Contributions must be made until the subscriber attains 60 years of age.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Savings bank account",
+        "Mobile number"
+      ],
+      "apply_url": "https://npscra.nsdl.co.in/scheme-details.php",
+      "source_url": "https://www.myscheme.gov.in/schemes/apy",
+      "last_verified": null
+    },
+    {
+      "id": "pmjjby",
+      "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Finance",
+      "category": [
+        "insurance",
+        "social security"
+      ],
+      "benefits": "Life insurance cover of Rs. 2 lakh on death from any cause, for an annual premium of Rs. 436 auto-debited from the subscriber's bank account.",
+      "clauses": [
+        {
+          "id": "pmjjby-c1",
+          "text": "The subscriber must be between 18 and 50 years of age.",
+          "constraint": {
+            "field": "age",
+            "op": "between",
+            "value": [
+              18,
+              50
+            ]
+          }
+        },
+        {
+          "id": "pmjjby-c2",
+          "text": "The subscriber must hold a savings bank account and give consent for auto-debit of the premium.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Savings bank account",
+        "Consent-cum-declaration form"
+      ],
+      "apply_url": "https://jansuraksha.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmjjby",
+      "last_verified": null
+    },
+    {
+      "id": "pmsby",
+      "name": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+      "level": "central",
+      "state": null,
+      "ministry": "Ministry of Finance",
+      "category": [
+        "insurance",
+        "social security"
+      ],
+      "benefits": "Accidental death and disability cover of Rs. 2 lakh for an annual premium of Rs. 20.",
+      "clauses": [
+        {
+          "id": "pmsby-c1",
+          "text": "The subscriber must be between 18 and 70 years of age.",
+          "constraint": {
+            "field": "age",
+            "op": "between",
+            "value": [
+              18,
+              70
+            ]
+          }
+        },
+        {
+          "id": "pmsby-c2",
+          "text": "The subscriber must hold a savings bank account and give consent for auto-debit of the premium.",
+          "constraint": null
+        }
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Savings bank account",
+        "Consent-cum-declaration form"
+      ],
+      "apply_url": "https://jansuraksha.gov.in/",
+      "source_url": "https://www.myscheme.gov.in/schemes/pmsby",
+      "last_verified": null
+    }
+  ]
+}

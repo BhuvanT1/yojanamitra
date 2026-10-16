@@ -1,0 +1,20 @@
+# The 72MB of source PDFs the corpus was built from. The build does not read
+# them — `npm run ingest` does, and that has already run.
+data/raw/
+
+# Never bake accounts into an image. They belong on the volume, and a password
+# hash in a pushed image layer is a password hash on a public registry.
+data/auth/
+
+node_modules/
+.next/
+.git/
+.env
+.env.local
+*.log
+evaluation/reports/
+tests/
+
+# Training code and the notebook. The app reads src/triage/predictions.json,
+# which is generated from these and checked in.
+ml/

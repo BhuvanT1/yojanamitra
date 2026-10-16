@@ -1,0 +1,216 @@
+{
+  "methodology": "Hand-written citizen personas. Each has a ground-truth structured profile and the SAME situation written three ways: plain (how someone writes a full sentence), telegraphic (comma-separated fragments, how people actually type on a phone), and code_mixed (romanised Indian-language or native script mixed with English). The three phrasings exist to measure extraction robustness — a system that only understands well-formed English is not usable here. Ground-truth profiles are authored, not derived from the system's own output, so extraction accuracy is a genuine measurement. expected_schemes are NOT yet filled in: they require a human to verify entitlements against approved clauses, and no clause in this corpus has been approved.",
+  "authored_by": "project team",
+  "expected_schemes_status": "pending_human_validation",
+  "personas": [
+    {
+      "id": "telangana-marginal-farmer",
+      "note": "The canonical PM-KISAN / KCC / PMFBY case.",
+      "profile": {
+        "age": 33,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 150000,
+        "land_acres": 1.5,
+        "state": "telangana",
+        "residence": "rural",
+        "category": "obc"
+      },
+      "phrasings": {
+        "plain": "I am 33 years old, a farmer in Telangana with 1.5 acres of land in my village. I belong to OBC and my yearly income is about 1.5 lakh.",
+        "telegraphic": "farmer, 33, telangana, 1.5 acres, obc, village, income 1.5 lakh",
+        "code_mixed": "main 33 saal ka kisan hoon, telangana mein 1.5 acres zameen hai, obc, gaon mein rehta hoon, saalana income 1.5 lakh"
+      }
+    },
+    {
+      "id": "bihar-widow-bpl",
+      "note": "Widow pension and BPL housing. Gender must be inferred from 'widow' and cited.",
+      "profile": {
+        "age": 52,
+        "gender": "female",
+        "annual_income_inr": 40000,
+        "state": "bihar",
+        "residence": "rural",
+        "special_categories": [
+          "widow",
+          "bpl",
+          "landless"
+        ]
+      },
+      "phrasings": {
+        "plain": "I am a 52 year old widow living in a village in Bihar. I have no land and I hold a BPL card. My yearly income is about 40000 rupees.",
+        "telegraphic": "widow, 52, bihar, no land, bpl card, village, income 40000",
+        "code_mixed": "main 52 saal ki vidhwa hoon, bihar ke gaon mein rehti hoon, koi zameen nahi, bpl card hai, saal ki aamdani 40000 rupaye"
+      }
+    },
+    {
+      "id": "sc-engineering-student",
+      "note": "Post-matric scholarship. Education stage and category both matter.",
+      "profile": {
+        "age": 20,
+        "gender": "female",
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 200000,
+        "state": "tamil nadu",
+        "category": "sc",
+        "education_stage": "undergraduate"
+      },
+      "phrasings": {
+        "plain": "I am a 20 year old woman studying engineering as an undergraduate in Tamil Nadu. I am from the Scheduled Caste community and my family income is 2 lakh a year.",
+        "telegraphic": "student, 20, female, tamil nadu, scheduled caste, undergraduate engineering, family income 2 lakh",
+        "code_mixed": "main 20 saal ki mahila student hoon, tamil nadu mein undergraduate engineering padh rahi hoon, scheduled caste, family income 2 lakh"
+      }
+    },
+    {
+      "id": "ap-farmer-daughter-class11",
+      "note": "The dependent case. The class belongs to the DAUGHTER, not the parent.",
+      "profile": {
+        "age": 44,
+        "occupation": [
+          "farmer"
+        ],
+        "annual_income_inr": 180000,
+        "land_acres": 2.0,
+        "state": "andhra pradesh",
+        "residence": "rural",
+        "dependents": [
+          {
+            "relation": "daughter",
+            "gender": "female",
+            "education_stage": "class_11_12"
+          }
+        ]
+      },
+      "phrasings": {
+        "plain": "I am 44 and a farmer in Andhra Pradesh. I own 2 acres of land in my village and my daughter is in 11th class. I earn about 1.8 lakh a year.",
+        "telegraphic": "farmer, 44, andhra pradesh, 2 acres, village, daughter in class 11, income 1.8 lakh",
+        "code_mixed": "నేను 44 ఏళ్ల రైతుని, ఆంధ్రప్రదేశ్ లో 2 ఎకరాలు ఉన్నాయి, మా అమ్మాయి 11వ తరగతి, గ్రామంలో ఉంటాను, ఆదాయం 1.8 లక్ష"
+      }
+    },
+    {
+      "id": "up-construction-worker",
+      "note": "Labour welfare board schemes. 'mazdoor' must map to labourer.",
+      "profile": {
+        "age": 38,
+        "occupation": [
+          "labourer"
+        ],
+        "annual_income_inr": 96000,
+        "state": "uttar pradesh",
+        "residence": "urban",
+        "special_categories": [
+          "bpl"
+        ]
+      },
+      "phrasings": {
+        "plain": "I am 38 years old and work as a construction worker in a city in Uttar Pradesh. I have a BPL card and earn around 96000 rupees a year.",
+        "telegraphic": "construction worker, 38, uttar pradesh, city, bpl, income 96000",
+        "code_mixed": "main 38 saal ka mazdoor hoon, uttar pradesh ke shahar mein kaam karta hoon, bpl card hai, saal ki aamdani 96000"
+      }
+    },
+    {
+      "id": "odisha-st-schoolboy",
+      "note": "Pre-matric scholarship. ST category, school class on the applicant themselves.",
+      "profile": {
+        "age": 14,
+        "occupation": [
+          "student"
+        ],
+        "annual_income_inr": 90000,
+        "state": "odisha",
+        "residence": "rural",
+        "category": "st",
+        "education_stage": "class_9_10"
+      },
+      "phrasings": {
+        "plain": "I am 14 years old and study in class 9 at a village school in Odisha. I belong to a Scheduled Tribe and my family income is 90000 rupees a year.",
+        "telegraphic": "student, 14, odisha, class 9, scheduled tribe, village, family income 90000",
+        "code_mixed": "main 14 saal ka student hoon, odisha ke gaon mein kaksha 9 mein padhta hoon, scheduled tribe, ghar ki aamdani 90000"
+      }
+    },
+    {
+      "id": "maharashtra-disabled-adult",
+      "note": "Disability pension. 'divyang' is the common romanised term.",
+      "profile": {
+        "age": 34,
+        "annual_income_inr": 60000,
+        "state": "maharashtra",
+        "residence": "rural",
+        "special_categories": [
+          "differently_abled",
+          "bpl"
+        ]
+      },
+      "phrasings": {
+        "plain": "I am 34, I live in a village in Maharashtra and I am differently abled. I hold a BPL card and my income is around 60000 rupees a year.",
+        "telegraphic": "34, maharashtra, village, differently abled, bpl, income 60000",
+        "code_mixed": "main 34 saal ka hoon, maharashtra ke gaon mein rehta hoon, divyang hoon, bpl card hai, aamdani 60000"
+      }
+    },
+    {
+      "id": "gujarat-woman-weaver",
+      "note": "Handloom and women's entrepreneurship. Gender is stated, not inferred.",
+      "profile": {
+        "age": 41,
+        "gender": "female",
+        "occupation": [
+          "weaver"
+        ],
+        "annual_income_inr": 120000,
+        "state": "gujarat",
+        "residence": "rural",
+        "category": "obc"
+      },
+      "phrasings": {
+        "plain": "I am a 41 year old woman working as a handloom weaver in a village in Gujarat. I am OBC and earn about 1.2 lakh a year.",
+        "telegraphic": "weaver, 41, female, gujarat, village, obc, income 1.2 lakh",
+        "code_mixed": "main 41 saal ki mahila hoon, gujarat ke gaon mein handloom bunkar ka kaam karti hoon, obc, saal ki aamdani 1.2 lakh"
+      }
+    },
+    {
+      "id": "delhi-street-vendor",
+      "note": "PM SVANidhi. Urban, no land, small trade.",
+      "profile": {
+        "age": 39,
+        "occupation": [
+          "shopkeeper"
+        ],
+        "annual_income_inr": 140000,
+        "state": "delhi",
+        "residence": "urban"
+      },
+      "phrasings": {
+        "plain": "I am 39 and run a street vending stall in Delhi city. I make around 1.4 lakh in a year.",
+        "telegraphic": "street vendor, 39, delhi, city, income 1.4 lakh",
+        "code_mixed": "main 39 saal ka hoon, delhi shahar mein street vendor hoon, saal ki aamdani 1.4 lakh"
+      }
+    },
+    {
+      "id": "kerala-senior-citizen",
+      "note": "Old-age pension. Age is the deciding field and must not be confused with income.",
+      "profile": {
+        "age": 68,
+        "annual_income_inr": 30000,
+        "state": "kerala",
+        "residence": "rural",
+        "special_categories": [
+          "senior_citizen",
+          "bpl",
+          "landless"
+        ]
+      },
+      "phrasings": {
+        "plain": "I am 68 years old and a senior citizen living in a village in Kerala. I own no land, I have a BPL card, and my income is about 30000 rupees a year.",
+        "telegraphic": "senior citizen, 68, kerala, village, no land, bpl, income 30000",
+        "code_mixed": "main 68 saal ka senior citizen hoon, kerala ke gaon mein rehta hoon, koi zameen nahi, bpl card hai, aamdani 30000"
+      }
+    }
+  ],
+  "gold_set_corrections": [
+    "ap-farmer-daughter-class11 / code_mixed originally omitted income, which the plain and telegraphic phrasings both state. The harness reported it as an extraction miss; it was a gold-set inconsistency. Income added so all three phrasings carry the same facts.",
+    "sc-engineering-student / code_mixed originally conveyed gender only through the Hindi feminine verb form 'ki'. Inferring gender from grammatical agreement is too fragile to rely on, so the phrasing now states 'mahila' explicitly."
+  ]
+}

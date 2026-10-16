@@ -1,0 +1,33 @@
+{
+  "dataset": "shrijayan/gov_myscheme",
+  "dataset_url": "https://huggingface.co/datasets/shrijayan/gov_myscheme",
+  "commit_sha": "2e7a91a1cd99c0d6a584b237022116fa21d2e88",
+  "license": "apache-2.0",
+  "cloned_at": "2026-09-14T18:37:44.634Z",
+  "ingested_at": "2026-09-14T18:37:44.634Z",
+  "raw_files": 2876,
+  "schemes": 2066,
+  "notes": [
+    "Dataset card claims CSV/JSON/Parquet; the repository contains PDFs only.",
+    "Card says 723 files; the clone contains 2876.",
+    "No clause is human-approved. Nothing in this corpus can decide eligibility yet."
+  ],
+  "counts": {
+    "raw_files": 2876,
+    "distinct_by_hash": 2066,
+    "distinct_by_slug": 2066,
+    "parsed_ok": 2066,
+    "parse_failed": 0,
+    "with_eligibility": 2065,
+    "without_eligibility": 1,
+    "with_exclusions": 402,
+    "level_central": 501,
+    "level_state": 1515,
+    "level_unknown": 50,
+    "clauses_total": 11551,
+    "clauses_distinct": 9825,
+    "schemes_with_uncovered_text": 327,
+    "uncovered_fragments": 825,
+    "nav_section_missing": 20
+  }
+}

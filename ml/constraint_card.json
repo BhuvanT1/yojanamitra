@@ -1,0 +1,24 @@
+{
+  "model": "OneVsRest LogisticRegression over TF-IDF word 1-2 + char 3-5 grams",
+  "trained_on": 4962,
+  "predicted_for": 6589,
+  "drafted": 1926,
+  "coverage": 0.2923,
+  "thresholds": {
+    "field": 0.6,
+    "op": 0.6,
+    "exclusion": 0.7
+  },
+  "seed": 20260915,
+  "caveat": "Cross-validated on clauses the regex proposer matched; these are the ones it missed, which are systematically harder. Treat the CV scores as an upper bound. Every draft requires a named reviewer to approve it before it can decide anything.",
+  "field_tally": {
+    "occupation": 1179,
+    "annual_income_inr": 53,
+    "age": 471,
+    "state": 100,
+    "category": 116,
+    "gender": 126,
+    "residence": 25,
+    "special_categories": 122
+  }
+}

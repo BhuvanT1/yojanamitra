@@ -1,0 +1,22 @@
+node_modules/
+data/raw/
+*.log
+.next/
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Accounts and invites. Password hashes and citizens' saved details never
+# belong in version control, not even hashed.
+data/auth/
+.env
+.env.local
+
+# Local environments, caches and scratch
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+_to_delete/
+desktop.ini
+*.pptx

@@ -1,0 +1,30 @@
+services:
+  yojanamitra:
+    build: .
+    image: yojanamitra:latest
+    ports:
+      - '5173:3000'
+    environment:
+      # Demonstration mode. Proposed constraints are treated as approved, in
+      # memory only, so the site demonstrates the full pipeline before the
+      # annotation backlog is worked. Every verdict carries a banner saying so.
+      # Set to 0 the moment real approvals exist.
+      YM_SIMULATE: '1'
+      # Optional. With no key the explanations fall back to deterministic text
+      # and the app runs fully offline. Eligibility is never decided by a model
+      # either way.
+      # GEMINI_API_KEY: ''
+    volumes:
+      # Accounts, invite codes and clause approvals. Without this every reviewer
+      # account and every approval disappears on the next `docker compose up`.
+      - ym-state:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://127.0.0.1:3000/api/health']
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+
+volumes:
+  ym-state:

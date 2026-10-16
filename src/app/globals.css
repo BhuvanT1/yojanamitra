@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  /*
+    Text-size control, the one utility-bar feature that is not decoration.
+    Everything in this project is sized in rem, so moving the root size scales
+    the whole interface — type, padding, tap targets — rather than just growing
+    the words and breaking the layout.
+  */
+  html[data-textsize='lg'] { font-size: 112.5%; }
+  html[data-textsize='xl'] { font-size: 125%; }
+
+  /*
+    A faint wash at the top so the header and hero sit on something, while the
+    page stays overwhelmingly light — this gets read on a cheap screen in
+    daylight, which rules out anything dim or low-contrast.
+
+    Three layers: a cool brand bloom behind the hero, a warm one off to the
+    right so the wash is not a symmetrical blob, and a 1px hairline grid that is
+    almost subliminal but stops the large empty areas reading as unfinished.
+  */
+  body {
+    @apply bg-surface text-ink antialiased;
+    background-image:
+      radial-gradient(1200px 460px at 50% -240px, rgba(19, 78, 143, 0.11), transparent 72%),
+      radial-gradient(820px 340px at 94% -150px, rgba(255, 153, 51, 0.07), transparent 70%),
+      linear-gradient(rgba(19, 78, 143, 0.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(19, 78, 143, 0.028) 1px, transparent 1px);
+    background-size: auto, auto, 72px 72px, 72px 72px;
+    background-repeat: no-repeat, no-repeat, repeat, repeat;
+    background-attachment: scroll, scroll, fixed, fixed;
+  }
+
+  /* Every interactive element must be reachable and visibly focused. A citizen
+     using a screen reader or a keyboard is not an edge case here. */
+  :focus-visible {
+    outline: 3px solid theme('colors.brand.DEFAULT');
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: theme('colors.brand.100');
+  }
+
+  /* Respect the OS setting rather than animating regardless. */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* 44px minimum on every tap target — the low-end-phone requirement. */
+  .tap {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-paper shadow-card;
+  }
+
+  /* A card a citizen is going to read and act on, rather than one that just
+     holds layout. The lift is small and the border darkens — enough to feel
+     responsive on a desktop, invisible on a phone where there is no hover. */
+  .card-interactive {
+    @apply card transition-[box-shadow,border-color,transform] duration-200
+           hover:-translate-y-px hover:border-line-strong hover:shadow-lift;
+  }
+
+  /*
+    The clause, quoted out of the official document.
+
+    This is the single most important thing on the screen: the verdict is a
+    claim, and this sentence is the evidence a citizen can carry to an office and
+    argue with. It gets the serif face, a solid rule down the left, and room to
+    breathe, because every other element exists to lead here.
+  */
+  .quote {
+    @apply border-l-4 border-brand-200 bg-surface py-3 pl-4 pr-3.5 font-quote
+           text-[1.04rem] leading-[1.7] text-ink;
+  }
+
+  /* A count or status pill. Tabular digits so a column of them does not jitter. */
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-sm
+           font-semibold tabular-nums;
+  }
+
+  /* A result-group heading: a short coloured rule, the name, then the count. */
+  .group-head {
+    @apply flex items-center gap-3;
+  }
+  .group-rule {
+    @apply h-5 w-1 shrink-0 rounded-full;
+  }
+
+  /* One of the tappable worked examples under the hero. */
+  .chip {
+    @apply tap inline-flex max-w-full items-center rounded-full border border-line-strong
+           bg-paper px-3.5 py-2 text-left text-sm text-ink-soft transition-colors
+           duration-150 hover:border-brand hover:bg-brand-50 hover:text-brand;
+  }
+
+  /* Buttons. Border width is kept identical between variants so nothing shifts
+     by a pixel when a control changes state. */
+  .btn {
+    @apply tap inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-3
+           text-base font-semibold transition-colors duration-150;
+  }
+  .btn-primary {
+    @apply btn border-brand bg-brand text-white hover:bg-brand-600 hover:border-brand-600
+           disabled:opacity-45 disabled:hover:bg-brand;
+  }
+  .btn-secondary {
+    @apply btn border-line-strong bg-paper text-ink hover:border-brand hover:text-brand;
+  }
+  .btn-ghost {
+    @apply btn border-transparent bg-transparent text-brand hover:bg-brand-50;
+  }
+  .btn-sm {
+    @apply px-3.5 py-2 text-sm;
+  }
+
+  .field {
+    @apply w-full rounded-2xl border border-line-strong bg-paper px-4 py-3.5 text-base text-ink
+           transition-[border-color,box-shadow] duration-150 placeholder:text-muted/70
+           focus:border-brand focus:outline-none focus:ring-4 focus:ring-brand/15;
+  }
+
+  .label {
+    @apply block text-sm font-semibold text-ink-soft;
+  }
+
+  /* A small uppercase tag. Used for OPTIONAL and for section eyebrows, so the
+     two read as the same kind of annotation. */
+  .eyebrow {
+    @apply text-[0.72rem] font-bold uppercase tracking-[0.09em];
+  }
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+.skeleton {
+  @apply relative overflow-hidden rounded bg-line/60;
+}
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+  animation: shimmer 1.4s infinite;
+}

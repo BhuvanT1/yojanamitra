@@ -1,0 +1,44 @@
+{
+  "seed": 20260915,
+  "n_clauses": 11551,
+  "n_schemes": 2064,
+  "n_groups": 9825,
+  "class_counts": {
+    "no_pattern": 5089,
+    "machine_checkable": 4962,
+    "not_machine_checkable": 795,
+    "needs_schema_extension": 705
+  },
+  "macro_f1": {
+    "Baseline (majority class)": {
+      "mean": 0.15291465995362713,
+      "std": 4.1174889454621205e-05
+    },
+    "A \u00b7 structural only": {
+      "mean": 0.33210162204198374,
+      "std": 0.020894393132649406
+    },
+    "B \u00b7 structural + cue words": {
+      "mean": 0.6101931788489865,
+      "std": 0.009867752428489184
+    },
+    "C \u00b7 TF-IDF (reference)": {
+      "mean": 0.7963897998497872,
+      "std": 0.010538259851981762
+    }
+  },
+  "top_features": {
+    "cue_procedure": 0.419,
+    "digit_density": 0.0858,
+    "avg_word_len": 0.072,
+    "cue_document": 0.0551,
+    "cue_state_resident": 0.0548,
+    "cue_occupation": 0.0497,
+    "cue_money": 0.0394,
+    "position_frac": 0.0297,
+    "n_chars": 0.0292,
+    "cue_age": 0.026,
+    "cue_gender": 0.023,
+    "n_words": 0.0224
+  }
+}

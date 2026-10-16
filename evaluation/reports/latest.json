@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-09-14T21:46:08.050Z",
+  "simulated": true,
+  "methodology": "Hand-written citizen personas. Each has a ground-truth structured profile and the SAME situation written three ways: plain (how someone writes a full sentence), telegraphic (comma-separated fragments, how people actually type on a phone), and code_mixed (romanised Indian-language or native script mixed with English). The three phrasings exist to measure extraction robustness — a system that only understands well-formed English is not usable here. Ground-truth profiles are authored, not derived from the system's own output, so extraction accuracy is a genuine measurement. expected_schemes are NOT yet filled in: they require a human to verify entitlements against approved clauses, and no clause in this corpus has been approved.",
+  "expected_schemes_status": "pending_human_validation",
+  "extraction": {
+    "utterances": 30,
+    "byField": {
+      "age": {
+        "correct": 30,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 0
+      },
+      "annual_income_inr": {
+        "correct": 30,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 0
+      },
+      "land_acres": {
+        "correct": 6,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 24
+      },
+      "occupation": {
+        "correct": 21,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 9
+      },
+      "state": {
+        "correct": 30,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 0
+      },
+      "residence": {
+        "correct": 27,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 3
+      },
+      "gender": {
+        "correct": 9,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 21
+      },
+      "category": {
+        "correct": 12,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 18
+      },
+      "education_stage": {
+        "correct": 6,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 24
+      },
+      "special_categories": {
+        "correct": 12,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 18
+      }
+    },
+    "byPhrasing": {
+      "plain": {
+        "correct": 61,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 39
+      },
+      "telegraphic": {
+        "correct": 61,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 39
+      },
+      "code_mixed": {
+        "correct": 61,
+        "missed": 0,
+        "wrong": 0,
+        "spurious": 0,
+        "true_negative": 39
+      }
+    },
+    "failures": [],
+    "dependents": {
+      "expected": 3,
+      "found": 3,
+      "relationCorrect": 3,
+      "stageCorrect": 3
+    },
+    "ungrounded": 0
+  },
+  "schemes": {
+    "status": "not_measurable",
+    "reason": "No persona has human-validated expected_schemes. The harness and the personas are written; a person must verify which schemes each persona is genuinely entitled to before precision and recall mean anything.",
+    "corpus_schemes": 2066,
+    "approved_clauses": 4962,
+    "personas_with_truth": 0
+  }
+}

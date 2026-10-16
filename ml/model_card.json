@@ -1,0 +1,56 @@
+{
+  "model": "HistGradientBoostingClassifier",
+  "features": "TF-IDF word 1-2 grams (max 1500) + 31 engineered",
+  "generated_from": "out-of-fold predictions, 5-fold StratifiedGroupKFold on dedup_group_id",
+  "seed": 20260915,
+  "classes": [
+    "machine_checkable",
+    "needs_schema_extension",
+    "no_pattern",
+    "not_machine_checkable"
+  ],
+  "macro_f1_out_of_fold": 0.9344,
+  "n_clauses": 11551,
+  "n_schemes": 2064,
+  "n_dedup_groups": 9825,
+  "caveat": "Labels come from the rule-based proposer, so this predicts what the proposer would say, not ground truth. It orders a review queue and never decides eligibility.",
+  "per_class": {
+    "machine_checkable": {
+      "precision": 0.964590710268694,
+      "recall": 0.9332930270052399,
+      "f1-score": 0.9486838062071085,
+      "support": 4962.0
+    },
+    "needs_schema_extension": {
+      "precision": 0.9676375404530745,
+      "recall": 0.8482269503546099,
+      "f1-score": 0.9040060468631897,
+      "support": 705.0
+    },
+    "no_pattern": {
+      "precision": 0.9283705231576973,
+      "recall": 0.9728826881509137,
+      "f1-score": 0.9501055459604683,
+      "support": 5089.0
+    },
+    "not_machine_checkable": {
+      "precision": 0.932415519399249,
+      "recall": 0.9371069182389937,
+      "f1-score": 0.9347553324968633,
+      "support": 795.0
+    },
+    "accuracy": 0.9458055579603497,
+    "macro avg": {
+      "precision": 0.9482535733196787,
+      "recall": 0.9228773959374393,
+      "f1-score": 0.9343876828819074,
+      "support": 11551.0
+    },
+    "weighted avg": {
+      "precision": 0.9466047528910573,
+      "recall": 0.9458055579603497,
+      "f1-score": 0.9456247010792181,
+      "support": 11551.0
+    }
+  }
+}

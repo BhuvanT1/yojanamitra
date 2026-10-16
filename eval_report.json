@@ -1,0 +1,136 @@
+{
+  "n_items": 60,
+  "final_answer": {
+    "rule_filter_over_all_schemes": {
+      "precision@5": 0.9499999999999998,
+      "recall@5_capped": 0.99,
+      "hit@1": 1.0
+    },
+    "rule_filter_over_retrieved_only": {
+      "precision@5": 0.8966666666666665,
+      "recall@5_capped": 0.9358333333333332,
+      "hit@1": 1.0
+    }
+  },
+  "n_schemes": 40,
+  "capabilities": {
+    "dense_retrieval": "tfidf",
+    "lexical_retrieval": "bm25",
+    "cross_encoder": false,
+    "ner": false,
+    "llm_explanations": false,
+    "translation": false
+  },
+  "methodology": "Labels are derived by running the deterministic rule filter over a hand-written ground-truth profile for each persona. The benchmark measures recovery of that conclusion from free text (extraction + retrieval). It does NOT validate that the corpus states Indian eligibility law correctly; that requires human verification against the live portal.",
+  "extraction": {
+    "per_field": {
+      "age": {
+        "precision": 1.0,
+        "recall": 0.9666666666666667,
+        "f1": 0.983050847457627,
+        "tp": 58,
+        "fp": 0,
+        "fn": 2
+      },
+      "annual_income_inr": {
+        "precision": 0.9661016949152542,
+        "recall": 0.95,
+        "f1": 0.957983193277311,
+        "tp": 57,
+        "fp": 2,
+        "fn": 3
+      },
+      "land_acres": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 21,
+        "fp": 0,
+        "fn": 0
+      },
+      "state": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 60,
+        "fp": 0,
+        "fn": 0
+      },
+      "occupation": {
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "f1": 0.9565217391304348,
+        "tp": 44,
+        "fp": 0,
+        "fn": 4
+      },
+      "category": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 18,
+        "fp": 0,
+        "fn": 0
+      },
+      "gender": {
+        "precision": 0.9130434782608695,
+        "recall": 1.0,
+        "f1": 0.9545454545454545,
+        "tp": 21,
+        "fp": 2,
+        "fn": 0
+      },
+      "residence": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 60,
+        "fp": 0,
+        "fn": 0
+      },
+      "education_stage": {
+        "precision": 1.0,
+        "recall": 0.7222222222222222,
+        "f1": 0.8387096774193548,
+        "tp": 13,
+        "fp": 0,
+        "fn": 5
+      }
+    },
+    "micro": {
+      "precision": 0.9887640449438202,
+      "recall": 0.9617486338797814,
+      "f1": 0.9750692520775623
+    }
+  },
+  "retrieval": {
+    "system": {
+      "recall@5": 0.3157665945165945,
+      "recall@5_capped": 0.47249999999999953,
+      "recall@10": 0.42524711399711373,
+      "mrr": 0.878888888888889
+    },
+    "keyword_baseline": {
+      "recall@5": 0.27248556998557005,
+      "recall@5_capped": 0.3916666666666665,
+      "recall@10": 0.4048436748436748,
+      "mrr": 0.6653174603174604
+    },
+    "by_phrasing_recall@10": {
+      "plain": 0.39455266955266954,
+      "telegraphic": 0.4345544733044733,
+      "code_mixed": 0.44663419913419916
+    }
+  },
+  "explanation": {
+    "citation_accuracy": 0.9733333333333334,
+    "hallucinated_eligibility_rate": 0.0,
+    "results_with_open_conditions": 0.05,
+    "n_results_scored": 300
+  },
+  "latency_ms": {
+    "median": 10.006995500020821,
+    "p90": 11.34135320007772,
+    "max": 12.862540000014633
+  }
+}

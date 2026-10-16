@@ -1,0 +1,42 @@
+{
+  "seed": 20260915,
+  "n_clauses": 11551,
+  "n_groups": 9825,
+  "dev_size": 9236,
+  "test_size": 2315,
+  "n_features": 50601,
+  "cv_macro_f1": {
+    "Baseline (majority)": {
+      "mean": 0.1525468396583745,
+      "std": 2.2949727645316105e-05,
+      "seconds": 2.118314266204834
+    },
+    "Decision tree": {
+      "mean": 0.8351352774065617,
+      "std": 0.005699308910542958,
+      "seconds": 22.669447660446167
+    },
+    "Random forest": {
+      "mean": 0.8830627936796411,
+      "std": 0.008260647547163229,
+      "seconds": 80.2100100517273
+    },
+    "Linear SVM": {
+      "mean": 0.9078616902034261,
+      "std": 0.004837102752208114,
+      "seconds": 9.213584899902344
+    },
+    "Logistic regression": {
+      "mean": 0.9007849672586301,
+      "std": 0.00625941609813149,
+      "seconds": 34.15749001502991
+    },
+    "Hist gradient boosting": {
+      "mean": 0.9329026810517547,
+      "std": 0.005244756879601187,
+      "seconds": 294.79306626319885
+    }
+  },
+  "winner": "Hist gradient boosting",
+  "holdout_macro_f1": 0.9321573036884843
+}
